@@ -1,0 +1,64 @@
+/* ==========================================
+   HEALTHCARE CONNECT DESIGN SYSTEM
+   ========================================== */
+
+:root {
+
+    /* ===== Primary Colors ===== */
+    --primary: #2EC1B1;
+    --primary-dark: #24A89A;
+    --primary-light: #EAFBF9;
+
+    /* ===== Neutral Colors ===== */
+    --white: #FFFFFF;
+    --background: #F5F7FA;
+    --surface: #FFFFFF;
+
+    /* ===== Text Colors ===== */
+    --text-primary: #243746;
+    --text-secondary: #667085;
+    --text-light: #98A2B3;
+
+    /* ===== Border ===== */
+    --border: #E8EEF2;
+
+    /* ===== Status Colors ===== */
+    --success: #34C759;
+    --warning: #F4B740;
+    --danger: #FF5C5C;
+    --info: #5B8DEF;
+
+    /* ===== Border Radius ===== */
+    --radius-sm: 12px;
+    --radius-md: 16px;
+    --radius-lg: 20px;
+    --radius-xl: 28px;
+    --radius-full: 999px;
+
+    /* ===== Shadows ===== */
+    --shadow-sm: 0 4px 12px rgba(0,0,0,0.05);
+    --shadow-md: 0 10px 25px rgba(0,0,0,0.08);
+    --shadow-lg: 0 15px 40px rgba(0,0,0,0.10);
+
+    /* ===== Spacing ===== */
+    --space-xs: 4px;
+    --space-sm: 8px;
+    --space-md: 16px;
+    --space-lg: 24px;
+    --space-xl: 32px;
+    --space-2xl: 48px;
+
+    /* ===== Font ===== */
+    --font-family: "Poppins", sans-serif;
+
+    /* ===== Font Sizes ===== */
+    --text-xs: 12px;
+    --text-sm: 14px;
+    --text-md: 16px;
+    --text-lg: 18px;
+    --text-xl: 24px;
+    --text-2xl: 32px;
+
+    /* ===== Transition ===== */
+    --transition: all 0.3s ease;
+}
