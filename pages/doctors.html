@@ -8,6 +8,17 @@
 
     <title>Healthcare Professionals | Healthcare Connect</title>
 
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
     <!-- CSS -->
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/variables.css">
@@ -15,21 +26,18 @@
     <link rel="stylesheet" href="../css/utilities.css">
     <link rel="stylesheet" href="../css/style.css">
 
-    <!-- Google Material Icons -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
 </head>
 
 <body>
 
-    <!-- ================= PAGE HEADER ================= -->
+    <!-- ==================================================
+                         PAGE HEADER
+    =================================================== -->
 
     <header class="page-header">
 
         <a href="dashboard.html" class="back-btn">
-
-            <span class="material-icons">arrow_back</span>
-
+            <i class="bi bi-arrow-left"></i>
         </a>
 
         <div class="header-content">
@@ -37,8 +45,7 @@
             <h1>Healthcare Professionals</h1>
 
             <p>
-                Connect with qualified healthcare professionals for consultations,
-                medical guidance and healthcare support.
+                Find healthcare support available in your area.
             </p>
 
         </div>
@@ -46,21 +53,22 @@
     </header>
 
 
-
-    <!-- ================= MAIN CONTENT ================= -->
+    <!-- ==================================================
+                         MAIN CONTENT
+    =================================================== -->
 
     <main class="doctors-page">
 
 
-        <!-- ================= SEARCH ================= -->
+        <!-- ==================================================
+                             SEARCH
+        =================================================== -->
 
         <section class="search-section">
 
             <div class="search-box">
 
-                <span class="material-icons">
-                    search
-                </span>
+                <i class="bi bi-search"></i>
 
                 <input
                     type="text"
@@ -71,8 +79,9 @@
         </section>
 
 
-
-        <!-- ================= FILTERS ================= -->
+        <!-- ==================================================
+                             FILTERS
+        =================================================== -->
 
         <section class="filter-section">
 
@@ -111,531 +120,474 @@
         </section>
 
 
-
-        <!-- ================= SECTION TITLE ================= -->
+        <!-- ==================================================
+                         SECTION HEADING
+        =================================================== -->
 
         <section class="results-header">
 
-            <h2>Available Healthcare Professionals</h2>
+            <div>
 
-            <p>
-                Find the right healthcare professional for your needs.
-            </p>
+                <h2>Available Healthcare Professionals</h2>
+
+                <p>
+                    Find healthcare support suitable for your needs.
+                </p>
+
+            </div>
 
         </section>
 
 
-
-        <!-- ================= DOCTOR GRID ================= -->
+        <!-- ==================================================
+                         DOCTOR GRID
+        =================================================== -->
 
         <section class="doctor-grid">
 
 
-
-            <!-- ================================================= -->
-            <!-- CARD 1 -->
-            <!-- ================================================= -->
+            <!-- ==================================================
+                              CARD 1
+            =================================================== -->
 
             <article class="card doctor-card">
 
-                <div class="doctor-image">
+                <div class="doctor-card-header">
 
-                    <img src="../assets/doctors/doctor-placeholder.jpg"
-                        alt="Healthcare Professional">
+                    <div class="doctor-image">
 
-                    <span class="availability available">
+                        <img
+                            src="../assets/doctors/doctor-placeholder.jpg"
+                            alt="Healthcare professional placeholder">
 
-                        Available
+                        <span class="availability available">
+                            Available
+                        </span>
 
-                    </span>
+                    </div>
+
+                    <div class="doctor-main-info">
+
+                        <h3 class="card-title">
+                            Healthcare Professional Name
+                        </h3>
+
+                        <p class="card-subtitle">
+                            General Care
+                        </p>
+
+                    </div>
 
                 </div>
 
-                <div class="doctor-info">
 
-                    <h3 class="card-title">
+                <div class="doctor-details">
 
-                        Healthcare Professional Name
+                    <div class="doctor-detail">
 
-                    </h3>
-
-                    <p class="card-subtitle">
-
-                        Healthcare Service
-
-                    </p>
-
-                    <div class="doctor-meta">
-
-                        <span class="material-icons">star</span>
+                        <i class="bi bi-star-fill"></i>
 
                         <span>Rating</span>
 
                     </div>
 
-                    <div class="doctor-meta">
+                    <div class="doctor-detail">
 
-                        <span class="material-icons">workspace_premium</span>
+                        <i class="bi bi-briefcase-fill"></i>
 
                         <span>Experience</span>
 
                     </div>
 
-                    <div class="doctor-meta">
+                    <div class="doctor-detail">
 
-                        <span class="material-icons">location_on</span>
+                        <i class="bi bi-geo-alt-fill"></i>
 
-                        <span>Healthcare Centre</span>
+                        <span>Nearby Healthcare Centre</span>
 
                     </div>
 
-                    <div class="doctor-meta">
+                    <div class="doctor-detail">
 
-                        <span class="material-icons">language</span>
+                        <i class="bi bi-translate"></i>
 
                         <span>Languages Spoken</span>
 
                     </div>
 
-                    <div class="doctor-meta">
-
-                        <span class="material-icons">schedule</span>
-
-                        <span>Consultation Timing</span>
-
-                    </div>
-
-                    <a href="doctor-details.html" class="btn-primary">
-
-                        View Profile
-
-                    </a>
-
                 </div>
+
+
+                <a href="doctor-details.html" class="btn-primary">
+
+                    View Profile
+
+                    <i class="bi bi-arrow-right"></i>
+
+                </a>
 
             </article>
 
 
 
-            <!-- ================================================= -->
-            <!-- CARD 2 -->
-            <!-- ================================================= -->
+            <!-- ==================================================
+                              CARD 2
+            =================================================== -->
 
             <article class="card doctor-card">
 
-                <div class="doctor-image">
+                <div class="doctor-card-header">
 
-                    <img src="../assets/doctors/doctor-placeholder.jpg"
-                        alt="Healthcare Professional">
+                    <div class="doctor-image">
 
-                    <span class="availability available">
+                        <img
+                            src="../assets/doctors/doctor-placeholder.jpg"
+                            alt="Healthcare professional placeholder">
 
-                        Available
+                        <span class="availability available">
+                            Available
+                        </span>
 
-                    </span>
+                    </div>
+
+                    <div class="doctor-main-info">
+
+                        <h3 class="card-title">
+                            Healthcare Professional Name
+                        </h3>
+
+                        <p class="card-subtitle">
+                            Women's Health
+                        </p>
+
+                    </div>
 
                 </div>
 
-                <div class="doctor-info">
 
-                    <h3 class="card-title">
+                <div class="doctor-details">
 
-                        Healthcare Professional Name
-
-                    </h3>
-
-                    <p class="card-subtitle">
-
-                        Healthcare Service
-
-                    </p>
-
-                    <div class="doctor-meta">
-
-                        <span class="material-icons">star</span>
-
+                    <div class="doctor-detail">
+                        <i class="bi bi-star-fill"></i>
                         <span>Rating</span>
-
                     </div>
 
-                    <div class="doctor-meta">
-
-                        <span class="material-icons">workspace_premium</span>
-
+                    <div class="doctor-detail">
+                        <i class="bi bi-briefcase-fill"></i>
                         <span>Experience</span>
-
                     </div>
 
-                    <div class="doctor-meta">
-
-                        <span class="material-icons">location_on</span>
-
-                        <span>Healthcare Centre</span>
-
+                    <div class="doctor-detail">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <span>Nearby Healthcare Centre</span>
                     </div>
 
-                    <div class="doctor-meta">
-
-                        <span class="material-icons">language</span>
-
+                    <div class="doctor-detail">
+                        <i class="bi bi-translate"></i>
                         <span>Languages Spoken</span>
-
                     </div>
-
-                    <div class="doctor-meta">
-
-                        <span class="material-icons">schedule</span>
-
-                        <span>Consultation Timing</span>
-
-                    </div>
-
-                    <a href="doctor-details.html" class="btn-primary">
-
-                        View Profile
-
-                    </a>
 
                 </div>
+
+
+                <a href="doctor-details.html" class="btn-primary">
+
+                    View Profile
+
+                    <i class="bi bi-arrow-right"></i>
+
+                </a>
 
             </article>
 
 
 
-            <!-- ================================================= -->
-            <!-- CARD 3 -->
-            <!-- ================================================= -->
+            <!-- ==================================================
+                              CARD 3
+            =================================================== -->
 
             <article class="card doctor-card">
 
-                <div class="doctor-image">
+                <div class="doctor-card-header">
 
-                    <img src="../assets/doctors/doctor-placeholder.jpg"
-                        alt="Healthcare Professional">
+                    <div class="doctor-image">
 
-                    <span class="availability available">
+                        <img
+                            src="../assets/doctors/doctor-placeholder.jpg"
+                            alt="Healthcare professional placeholder">
 
-                        Available
+                        <span class="availability available">
+                            Available
+                        </span>
 
-                    </span>
+                    </div>
+
+                    <div class="doctor-main-info">
+
+                        <h3 class="card-title">
+                            Healthcare Professional Name
+                        </h3>
+
+                        <p class="card-subtitle">
+                            Child Care
+                        </p>
+
+                    </div>
 
                 </div>
 
-                <div class="doctor-info">
 
-                    <h3 class="card-title">
+                <div class="doctor-details">
 
-                        Healthcare Professional Name
-
-                    </h3>
-
-                    <p class="card-subtitle">
-
-                        Healthcare Service
-
-                    </p>
-
-                    <div class="doctor-meta">
-
-                        <span class="material-icons">star</span>
-
+                    <div class="doctor-detail">
+                        <i class="bi bi-star-fill"></i>
                         <span>Rating</span>
-
                     </div>
 
-                    <div class="doctor-meta">
-
-                        <span class="material-icons">workspace_premium</span>
-
+                    <div class="doctor-detail">
+                        <i class="bi bi-briefcase-fill"></i>
                         <span>Experience</span>
-
                     </div>
 
-                    <div class="doctor-meta">
-
-                        <span class="material-icons">location_on</span>
-
-                        <span>Healthcare Centre</span>
-
+                    <div class="doctor-detail">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <span>Nearby Healthcare Centre</span>
                     </div>
 
-                    <div class="doctor-meta">
-
-                        <span class="material-icons">language</span>
-
+                    <div class="doctor-detail">
+                        <i class="bi bi-translate"></i>
                         <span>Languages Spoken</span>
-
                     </div>
-
-                    <div class="doctor-meta">
-
-                        <span class="material-icons">schedule</span>
-
-                        <span>Consultation Timing</span>
-
-                    </div>
-
-                    <a href="doctor-details.html" class="btn-primary">
-
-                        View Profile
-
-                    </a>
 
                 </div>
+
+
+                <a href="doctor-details.html" class="btn-primary">
+
+                    View Profile
+
+                    <i class="bi bi-arrow-right"></i>
+
+                </a>
 
             </article>
-                        <!-- ================================================= -->
-            <!-- CARD 4 -->
-            <!-- ================================================= -->
+
+
+
+            <!-- ==================================================
+                              CARD 4
+            =================================================== -->
 
             <article class="card doctor-card">
 
-                <div class="doctor-image">
+                <div class="doctor-card-header">
 
-                    <img src="../assets/doctors/doctor-placeholder.jpg"
-                        alt="Healthcare Professional">
+                    <div class="doctor-image">
 
-                    <span class="availability available">
+                        <img
+                            src="../assets/doctors/doctor-placeholder.jpg"
+                            alt="Healthcare professional placeholder">
 
-                        Available
+                        <span class="availability available">
+                            Available
+                        </span>
 
-                    </span>
+                    </div>
+
+                    <div class="doctor-main-info">
+
+                        <h3 class="card-title">
+                            Healthcare Professional Name
+                        </h3>
+
+                        <p class="card-subtitle">
+                            Elder Care
+                        </p>
+
+                    </div>
 
                 </div>
 
-                <div class="doctor-info">
 
-                    <h3 class="card-title">
+                <div class="doctor-details">
 
-                        Healthcare Professional Name
-
-                    </h3>
-
-                    <p class="card-subtitle">
-
-                        Healthcare Service
-
-                    </p>
-
-                    <div class="doctor-meta">
-
-                        <span class="material-icons">star</span>
-
+                    <div class="doctor-detail">
+                        <i class="bi bi-star-fill"></i>
                         <span>Rating</span>
-
                     </div>
 
-                    <div class="doctor-meta">
-
-                        <span class="material-icons">workspace_premium</span>
-
+                    <div class="doctor-detail">
+                        <i class="bi bi-briefcase-fill"></i>
                         <span>Experience</span>
-
                     </div>
 
-                    <div class="doctor-meta">
-
-                        <span class="material-icons">location_on</span>
-
-                        <span>Healthcare Centre</span>
-
+                    <div class="doctor-detail">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <span>Nearby Healthcare Centre</span>
                     </div>
 
-                    <div class="doctor-meta">
-
-                        <span class="material-icons">language</span>
-
+                    <div class="doctor-detail">
+                        <i class="bi bi-translate"></i>
                         <span>Languages Spoken</span>
-
                     </div>
-
-                    <div class="doctor-meta">
-
-                        <span class="material-icons">schedule</span>
-
-                        <span>Consultation Timing</span>
-
-                    </div>
-
-                    <a href="doctor-details.html" class="btn-primary">
-
-                        View Profile
-
-                    </a>
 
                 </div>
+
+
+                <a href="doctor-details.html" class="btn-primary">
+
+                    View Profile
+
+                    <i class="bi bi-arrow-right"></i>
+
+                </a>
 
             </article>
 
 
 
-            <!-- ================================================= -->
-            <!-- CARD 5 -->
-            <!-- ================================================= -->
+            <!-- ==================================================
+                              CARD 5
+            =================================================== -->
 
             <article class="card doctor-card">
 
-                <div class="doctor-image">
+                <div class="doctor-card-header">
 
-                    <img src="../assets/doctors/doctor-placeholder.jpg"
-                        alt="Healthcare Professional">
+                    <div class="doctor-image">
 
-                    <span class="availability available">
+                        <img
+                            src="../assets/doctors/doctor-placeholder.jpg"
+                            alt="Healthcare professional placeholder">
 
-                        Available
+                        <span class="availability available">
+                            Available
+                        </span>
 
-                    </span>
+                    </div>
+
+                    <div class="doctor-main-info">
+
+                        <h3 class="card-title">
+                            Healthcare Professional Name
+                        </h3>
+
+                        <p class="card-subtitle">
+                            General Care
+                        </p>
+
+                    </div>
 
                 </div>
 
-                <div class="doctor-info">
 
-                    <h3 class="card-title">
+                <div class="doctor-details">
 
-                        Healthcare Professional Name
-
-                    </h3>
-
-                    <p class="card-subtitle">
-
-                        Healthcare Service
-
-                    </p>
-
-                    <div class="doctor-meta">
-
-                        <span class="material-icons">star</span>
-
+                    <div class="doctor-detail">
+                        <i class="bi bi-star-fill"></i>
                         <span>Rating</span>
-
                     </div>
 
-                    <div class="doctor-meta">
-
-                        <span class="material-icons">workspace_premium</span>
-
+                    <div class="doctor-detail">
+                        <i class="bi bi-briefcase-fill"></i>
                         <span>Experience</span>
-
                     </div>
 
-                    <div class="doctor-meta">
-
-                        <span class="material-icons">location_on</span>
-
-                        <span>Healthcare Centre</span>
-
+                    <div class="doctor-detail">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <span>Nearby Healthcare Centre</span>
                     </div>
 
-                    <div class="doctor-meta">
-
-                        <span class="material-icons">language</span>
-
+                    <div class="doctor-detail">
+                        <i class="bi bi-translate"></i>
                         <span>Languages Spoken</span>
-
                     </div>
-
-                    <div class="doctor-meta">
-
-                        <span class="material-icons">schedule</span>
-
-                        <span>Consultation Timing</span>
-
-                    </div>
-
-                    <a href="doctor-details.html" class="btn-primary">
-
-                        View Profile
-
-                    </a>
 
                 </div>
+
+
+                <a href="doctor-details.html" class="btn-primary">
+
+                    View Profile
+
+                    <i class="bi bi-arrow-right"></i>
+
+                </a>
 
             </article>
 
 
 
-            <!-- ================================================= -->
-            <!-- CARD 6 -->
-            <!-- ================================================= -->
+            <!-- ==================================================
+                              CARD 6
+            =================================================== -->
 
             <article class="card doctor-card">
 
-                <div class="doctor-image">
+                <div class="doctor-card-header">
 
-                    <img src="../assets/doctors/doctor-placeholder.jpg"
-                        alt="Healthcare Professional">
+                    <div class="doctor-image">
 
-                    <span class="availability available">
+                        <img
+                            src="../assets/doctors/doctor-placeholder.jpg"
+                            alt="Healthcare professional placeholder">
 
-                        Available
+                        <span class="availability available">
+                            Available
+                        </span>
 
-                    </span>
+                    </div>
+
+                    <div class="doctor-main-info">
+
+                        <h3 class="card-title">
+                            Healthcare Professional Name
+                        </h3>
+
+                        <p class="card-subtitle">
+                            General Care
+                        </p>
+
+                    </div>
 
                 </div>
 
-                <div class="doctor-info">
 
-                    <h3 class="card-title">
+                <div class="doctor-details">
 
-                        Healthcare Professional Name
-
-                    </h3>
-
-                    <p class="card-subtitle">
-
-                        Healthcare Service
-
-                    </p>
-
-                    <div class="doctor-meta">
-
-                        <span class="material-icons">star</span>
-
+                    <div class="doctor-detail">
+                        <i class="bi bi-star-fill"></i>
                         <span>Rating</span>
-
                     </div>
 
-                    <div class="doctor-meta">
-
-                        <span class="material-icons">workspace_premium</span>
-
+                    <div class="doctor-detail">
+                        <i class="bi bi-briefcase-fill"></i>
                         <span>Experience</span>
-
                     </div>
 
-                    <div class="doctor-meta">
-
-                        <span class="material-icons">location_on</span>
-
-                        <span>Healthcare Centre</span>
-
+                    <div class="doctor-detail">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <span>Nearby Healthcare Centre</span>
                     </div>
 
-                    <div class="doctor-meta">
-
-                        <span class="material-icons">language</span>
-
+                    <div class="doctor-detail">
+                        <i class="bi bi-translate"></i>
                         <span>Languages Spoken</span>
-
                     </div>
-
-                    <div class="doctor-meta">
-
-                        <span class="material-icons">schedule</span>
-
-                        <span>Consultation Timing</span>
-
-                    </div>
-
-                    <a href="doctor-details.html" class="btn-primary">
-
-                        View Profile
-
-                    </a>
 
                 </div>
+
+
+                <a href="doctor-details.html" class="btn-primary">
+
+                    View Profile
+
+                    <i class="bi bi-arrow-right"></i>
+
+                </a>
 
             </article>
+
 
         </section>
 

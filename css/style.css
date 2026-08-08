@@ -1112,285 +1112,410 @@
     }
 
 }
-/*==================================================
-                DOCTORS PAGE
-==================================================*/
+/* ==========================================================
+                    DOCTORS PAGE
+========================================================== */
 
-.doctors-page{
+/* =========================
+   PAGE
+========================= */
 
-    max-width:1200px;
+.doctors-page {
 
-    margin:auto;
+    max-width: 1200px;
 
-    padding:30px 20px 100px;
+    margin: 0 auto;
 
-}
-
-/*==================================================
-                FILTER SECTION
-==================================================*/
-
-.filter-section{
-
-    display:flex;
-
-    flex-wrap:wrap;
-
-    gap:12px;
-
-    margin-bottom:30px;
+    padding: 30px 20px 100px;
 
 }
 
-.chip{
 
-    padding:10px 18px;
+/* =========================
+   RESULTS HEADER
+========================= */
 
-    border-radius:999px;
+.results-header {
 
-    border:1px solid var(--border);
-
-    background:var(--surface);
-
-    color:var(--text-secondary);
-
-    cursor:pointer;
-
-    transition:var(--transition);
-
-    font-size:14px;
-
-    font-weight:500;
+    margin-bottom: 28px;
 
 }
 
-.chip:hover{
+.results-header h2 {
 
-    background:var(--primary-light);
+    font-size: 28px;
 
-    color:var(--primary);
+    font-weight: 600;
 
-}
+    color: var(--text-primary);
 
-.chip.active{
-
-    background:var(--primary);
-
-    color:var(--white);
-
-    border-color:var(--primary);
+    margin-bottom: 8px;
 
 }
 
-/*==================================================
-                RESULTS HEADER
-==================================================*/
+.results-header p {
 
-.results-header{
+    color: var(--text-secondary);
 
-    margin-bottom:24px;
+    font-size: 15px;
 
 }
 
-.results-header h2{
 
-    font-size:28px;
+/* =========================
+   DOCTOR GRID
+========================= */
 
-    color:var(--text-primary);
+.doctor-grid {
 
-    margin-bottom:8px;
+    display: grid;
 
-}
+    grid-template-columns: repeat(3, minmax(0, 1fr));
 
-.results-header p{
-
-    color:var(--text-secondary);
-
-}
-
-/*==================================================
-                DOCTOR GRID
-==================================================*/
-
-.doctor-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
-
-    gap:24px;
-
-}
-/*==================================================
-                DOCTOR CARD
-==================================================*/
-
-.doctor-card{
-
-    display:flex;
-
-    gap:20px;
-
-    padding:22px;
-
-    transition:var(--transition);
-
-    align-items:flex-start;
+    gap: 24px;
 
 }
 
-.doctor-card:hover{
 
-    transform:translateY(-6px);
+/* =========================
+   DOCTOR CARD
+========================= */
 
-    box-shadow:var(--shadow-md);
+.doctor-card {
 
-}
+    display: flex;
 
-.doctor-image{
+    flex-direction: column;
 
-    position:relative;
+    width: 100%;
 
-    flex-shrink:0;
+    min-width: 0;
 
-}
+    padding: 24px;
 
-.doctor-image img{
+    background: var(--surface);
 
-    width:90px;
+    border: 1px solid var(--border);
 
-    height:90px;
+    border-radius: var(--radius-lg);
 
-    border-radius:50%;
+    box-shadow: var(--shadow-sm);
 
-    object-fit:cover;
-
-    background:#E8EEF2;
-
-}
-
-.availability{
-
-    position:absolute;
-
-    bottom:-8px;
-
-    left:50%;
-
-    transform:translateX(-50%);
-
-    padding:4px 10px;
-
-    background:var(--success);
-
-    color:white;
-
-    font-size:11px;
-
-    border-radius:999px;
-
-    white-space:nowrap;
+    transition: var(--transition);
 
 }
 
-.doctor-info{
+.doctor-card:hover {
 
-    flex:1;
+    transform: translateY(-5px);
 
-}
-
-.doctor-info .card-title{
-
-    margin-bottom:6px;
+    box-shadow: var(--shadow-md);
 
 }
 
-.doctor-info .card-subtitle{
 
-    color:var(--primary);
+/* =========================
+   CARD TOP
+========================= */
 
-    margin-bottom:16px;
+.doctor-card-header {
 
-}
+    display: flex;
 
-.doctor-meta{
+    align-items: center;
 
-    display:flex;
+    gap: 16px;
 
-    align-items:center;
+    width: 100%;
 
-    gap:10px;
-
-    margin-bottom:12px;
-
-    color:var(--text-secondary);
-
-    font-size:14px;
+    margin-bottom: 22px;
 
 }
 
-.doctor-meta .material-icons{
 
-    color:var(--primary);
+/* =========================
+   DOCTOR IMAGE
+========================= */
 
-    font-size:20px;
+.doctor-image {
+
+    position: relative;
+
+    width: 86px;
+
+    height: 86px;
+
+    min-width: 86px;
+
+    border-radius: 50%;
+
+    overflow: visible;
+
+    background: var(--primary-light);
 
 }
 
-.doctor-info .btn-primary{
+.doctor-image img {
 
-    margin-top:16px;
+    width: 86px;
 
-    width:100%;
+    height: 86px;
+
+    display: block;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    background: var(--primary-light);
 
 }
-/*==================================================
-                RESPONSIVE
-==================================================*/
 
-@media(max-width:768px){
 
-    .doctor-card{
+/* =========================
+   AVAILABILITY
+========================= */
 
-        flex-direction:column;
+.availability {
 
-        align-items:center;
+    position: absolute;
 
-        text-align:center;
+    left: 50%;
+
+    bottom: -8px;
+
+    transform: translateX(-50%);
+
+    padding: 5px 11px;
+
+    border-radius: 999px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    z-index: 2;
+
+}
+
+.availability.available {
+
+    background: #2FC866;
+
+    color: #ffffff;
+
+}
+
+
+/* =========================
+   DOCTOR MAIN INFO
+========================= */
+
+.doctor-main-info {
+
+    flex: 1;
+
+    min-width: 0;
+
+}
+
+.doctor-main-info .card-title {
+
+    font-size: 18px;
+
+    line-height: 1.4;
+
+    font-weight: 600;
+
+    color: var(--text-primary);
+
+    margin-bottom: 6px;
+
+    word-break: normal;
+
+}
+
+.doctor-main-info .card-subtitle {
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    color: var(--primary);
+
+    margin: 0;
+
+}
+
+
+/* =========================
+   DOCTOR DETAILS
+========================= */
+
+.doctor-details {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+
+    padding: 18px 0;
+
+    border-top: 1px solid var(--border);
+
+    border-bottom: 1px solid var(--border);
+
+    margin-bottom: 20px;
+
+}
+
+.doctor-detail {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 9px;
+
+    min-width: 0;
+
+    color: var(--text-secondary);
+
+    font-size: 13px;
+
+    line-height: 1.4;
+
+}
+
+.doctor-detail i {
+
+    flex-shrink: 0;
+
+    font-size: 14px;
+
+    color: var(--primary);
+
+    margin-top: 2px;
+
+}
+
+.doctor-detail span {
+
+    min-width: 0;
+
+    overflow-wrap: anywhere;
+
+}
+
+
+/* =========================
+   PROFILE BUTTON
+========================= */
+
+.doctor-card .btn-primary {
+
+    width: 100%;
+
+    min-height: 46px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 9px;
+
+    border-radius: var(--radius-md);
+
+    text-align: center;
+
+}
+
+.doctor-card .btn-primary i {
+
+    font-size: 16px;
+
+    transition: transform 0.2s ease;
+
+}
+
+.doctor-card .btn-primary:hover i {
+
+    transform: translateX(4px);
+
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1050px) {
+
+    .doctor-grid {
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
 
     }
 
-    .doctor-info{
+}
 
-        width:100%;
+
+@media (max-width: 700px) {
+
+    .doctors-page {
+
+        padding: 24px 16px 100px;
 
     }
 
-    .doctor-meta{
+    .doctor-grid {
 
-        justify-content:center;
-
-    }
-
-    .doctor-info .btn-primary{
-
-        width:100%;
+        grid-template-columns: 1fr;
 
     }
 
 }
 
-@media(max-width:480px){
 
-    .doctors-page{
+@media (max-width: 480px) {
 
-        padding:20px 15px 100px;
+    .doctor-card {
+
+        padding: 20px;
 
     }
 
-    .doctor-grid{
+    .doctor-card-header {
 
-        grid-template-columns:1fr;
+        align-items: flex-start;
+
+    }
+
+    .doctor-image,
+    .doctor-image img {
+
+        width: 76px;
+
+        height: 76px;
+
+        min-width: 76px;
+
+    }
+
+    .doctor-main-info .card-title {
+
+        font-size: 17px;
+
+    }
+
+    .doctor-details {
+
+        grid-template-columns: 1fr;
 
     }
 
@@ -1777,6 +1902,742 @@
     .record-actions{
 
         flex-direction:column;
+
+    }
+
+}
+/* ==========================================================
+                DOCTOR DETAILS PAGE
+========================================================== */
+
+
+/* =========================
+   PAGE CONTAINER
+========================= */
+
+.doctor-details-page {
+
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    padding: 30px 20px 100px;
+
+}
+
+
+/* =========================
+   PROFILE CARD
+========================= */
+
+.doctor-profile-card {
+
+    padding: 32px;
+
+    margin-bottom: 24px;
+
+    overflow: hidden;
+
+}
+
+
+.doctor-profile-top {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 28px;
+
+}
+
+
+/* =========================
+   PROFILE IMAGE
+========================= */
+
+.doctor-profile-image {
+
+    position: relative;
+
+    width: 150px;
+
+    height: 150px;
+
+    flex-shrink: 0;
+
+}
+
+
+.doctor-profile-image img {
+
+    width: 150px;
+
+    height: 150px;
+
+    display: block;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    background: var(--primary-light);
+
+    border: 5px solid var(--primary-light);
+
+}
+
+
+/* =========================
+   PROFILE AVAILABILITY
+========================= */
+
+.profile-availability {
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: -4px;
+
+    transform: translateX(-50%);
+
+    background: #2FC866;
+
+    color: #ffffff;
+
+    padding: 6px 14px;
+
+    border-radius: 999px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+}
+
+
+/* =========================
+   PROFILE INFORMATION
+========================= */
+
+.doctor-profile-info {
+
+    flex: 1;
+
+    min-width: 0;
+
+}
+
+
+.profile-label {
+
+    display: inline-block;
+
+    color: var(--primary);
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    margin-bottom: 8px;
+
+}
+
+
+.doctor-profile-info h2 {
+
+    font-size: 30px;
+
+    line-height: 1.3;
+
+    color: var(--text-primary);
+
+    margin-bottom: 7px;
+
+}
+
+
+.profile-service {
+
+    color: var(--text-secondary);
+
+    font-size: 16px;
+
+    margin-bottom: 16px;
+
+}
+
+
+.profile-rating,
+.profile-location {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-right: 18px;
+
+    color: var(--text-secondary);
+
+    font-size: 14px;
+
+}
+
+
+.profile-rating i,
+.profile-location i {
+
+    color: var(--primary);
+
+    font-size: 15px;
+
+}
+
+
+/* =========================
+   PROFILE ACTION
+========================= */
+
+.profile-actions {
+
+    margin-top: 28px;
+
+    padding-top: 24px;
+
+    border-top: 1px solid var(--border);
+
+}
+
+
+.profile-actions .btn-primary {
+
+    width: 100%;
+
+    min-height: 50px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 9px;
+
+}
+
+
+/* =========================
+   QUICK INFORMATION GRID
+========================= */
+
+.doctor-info-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 16px;
+
+    margin-bottom: 24px;
+
+}
+
+
+.doctor-info-card {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 20px;
+
+    min-width: 0;
+
+}
+
+
+.info-icon {
+
+    width: 44px;
+
+    height: 44px;
+
+    min-width: 44px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-radius: 13px;
+
+    background: var(--primary-light);
+
+}
+
+
+.info-icon i {
+
+    color: var(--primary);
+
+    font-size: 19px;
+
+}
+
+
+.doctor-info-card > div:last-child {
+
+    min-width: 0;
+
+}
+
+
+.doctor-info-card span {
+
+    display: block;
+
+    color: var(--text-light);
+
+    font-size: 12px;
+
+    margin-bottom: 5px;
+
+}
+
+
+.doctor-info-card strong {
+
+    display: block;
+
+    color: var(--text-primary);
+
+    font-size: 13px;
+
+    line-height: 1.4;
+
+    overflow-wrap: anywhere;
+
+}
+
+
+/* =========================
+   DETAIL SECTIONS
+========================= */
+
+.details-section {
+
+    padding: 28px;
+
+    margin-bottom: 24px;
+
+}
+
+
+.details-heading {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 22px;
+
+}
+
+
+.details-heading-icon {
+
+    width: 46px;
+
+    height: 46px;
+
+    min-width: 46px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-radius: 14px;
+
+    background: var(--primary-light);
+
+}
+
+
+.details-heading-icon i {
+
+    color: var(--primary);
+
+    font-size: 20px;
+
+}
+
+
+.details-heading h2 {
+
+    font-size: 21px;
+
+    color: var(--text-primary);
+
+    margin-bottom: 3px;
+
+}
+
+
+.details-heading p {
+
+    color: var(--text-light);
+
+    font-size: 13px;
+
+}
+
+
+/* =========================
+   ABOUT TEXT
+========================= */
+
+.details-text {
+
+    color: var(--text-secondary);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    max-width: 850px;
+
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.services-list {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 14px;
+
+}
+
+
+.service-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 14px 16px;
+
+    background: var(--background);
+
+    border-radius: var(--radius-md);
+
+    color: var(--text-secondary);
+
+    font-size: 14px;
+
+}
+
+
+.service-item i {
+
+    color: var(--primary);
+
+    font-size: 17px;
+
+    flex-shrink: 0;
+
+}
+
+
+/* =========================
+   AVAILABILITY
+========================= */
+
+.availability-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.availability-row {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 15px 0;
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+
+.availability-row:last-child {
+
+    border-bottom: none;
+
+}
+
+
+.availability-row span {
+
+    color: var(--text-secondary);
+
+    font-size: 14px;
+
+}
+
+
+.availability-row strong {
+
+    color: var(--text-primary);
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+}
+
+
+.availability-row.unavailable strong {
+
+    color: var(--text-light);
+
+}
+
+
+/* =========================
+   HEALTHCARE CENTRE
+========================= */
+
+.centre-info {
+
+    padding: 20px;
+
+    background: var(--background);
+
+    border-radius: var(--radius-lg);
+
+}
+
+
+.centre-info h3 {
+
+    color: var(--text-primary);
+
+    font-size: 17px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.centre-info > p {
+
+    color: var(--text-secondary);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    margin-bottom: 18px;
+
+}
+
+
+.centre-meta {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 20px;
+
+}
+
+
+.centre-meta span {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: var(--text-secondary);
+
+    font-size: 13px;
+
+}
+
+
+.centre-meta i {
+
+    color: var(--primary);
+
+}
+
+
+/* =========================
+   BOTTOM BOOKING
+========================= */
+
+.bottom-booking {
+
+    display: flex;
+
+    gap: 14px;
+
+    margin-top: 8px;
+
+}
+
+
+.bottom-booking .btn-primary,
+.bottom-booking .btn-secondary {
+
+    flex: 1;
+
+    min-height: 50px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .doctor-info-grid {
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .doctor-profile-top {
+
+        flex-direction: column;
+
+        text-align: center;
+
+    }
+
+    .doctor-profile-info {
+
+        width: 100%;
+
+    }
+
+    .profile-rating,
+    .profile-location {
+
+        margin: 4px 8px;
+
+    }
+
+    .services-list {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+@media (max-width: 520px) {
+
+    .doctor-details-page {
+
+        padding: 20px 15px 90px;
+
+    }
+
+    .doctor-profile-card {
+
+        padding: 24px 20px;
+
+    }
+
+    .doctor-profile-image,
+    .doctor-profile-image img {
+
+        width: 120px;
+
+        height: 120px;
+
+    }
+
+    .doctor-profile-info h2 {
+
+        font-size: 24px;
+
+    }
+
+    .doctor-info-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .details-section {
+
+        padding: 22px 20px;
+
+    }
+
+    .availability-row {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 5px;
+
+    }
+
+    .bottom-booking {
+
+        flex-direction: column;
 
     }
 
