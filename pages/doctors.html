@@ -4,22 +4,30 @@
 <head>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Healthcare Professionals | Healthcare Connect</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Find a Doctor | Healthcare Connect</title>
 
     <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 
     <!-- Bootstrap Icons -->
-    <link rel="stylesheet"
+    <link
+        rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <!-- CSS -->
+    <!-- Existing CSS Architecture -->
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/variables.css">
     <link rel="stylesheet" href="../css/components.css">
@@ -28,197 +36,298 @@
 
 </head>
 
+
 <body>
 
     <!-- ==================================================
-                         PAGE HEADER
+                         HEADER
     =================================================== -->
 
-    <header class="page-header">
+    <header class="doctors-header">
 
-        <a href="dashboard.html" class="back-btn">
-            <i class="bi bi-arrow-left"></i>
-        </a>
+        <div class="doctors-header-inner">
 
-        <div class="header-content">
+            <a
+                href="dashboard.html"
+                class="doctors-back-btn"
+                aria-label="Back to dashboard">
 
-            <h1>Healthcare Professionals</h1>
+                <i class="bi bi-arrow-left"></i>
 
-            <p>
-                Find healthcare support available in your area.
-            </p>
+            </a>
+
+
+            <div class="doctors-header-text">
+
+                <span class="doctors-eyebrow">
+                    HEALTHCARE CONNECT
+                </span>
+
+                <h1>
+                    Find the right healthcare professional
+                </h1>
+
+                <p>
+                    Explore trusted healthcare professionals
+                    and choose care that fits your needs.
+                </p>
+
+            </div>
+
+
+            <div class="doctors-header-actions">
+
+                <button
+                    type="button"
+                    class="doctors-header-icon"
+                    aria-label="Notifications">
+
+                    <i class="bi bi-bell"></i>
+
+                </button>
+
+
+                <a
+                    href="profile.html"
+                    class="doctors-header-icon"
+                    aria-label="Profile">
+
+                    <i class="bi bi-person"></i>
+
+                </a>
+
+            </div>
 
         </div>
 
     </header>
 
 
+
     <!-- ==================================================
-                         MAIN CONTENT
+                         MAIN
     =================================================== -->
 
     <main class="doctors-page">
 
 
-        <!-- ==================================================
-                             SEARCH
-        =================================================== -->
+        <!-- ================= SEARCH ================= -->
 
-        <section class="search-section">
+        <section class="doctors-search-section">
 
-            <div class="search-box">
+            <div class="doctors-search-box">
 
                 <i class="bi bi-search"></i>
 
                 <input
-                    type="text"
-                    placeholder="Search healthcare professionals">
+                    type="search"
+                    id="doctorSearch"
+                    placeholder="Search by doctor, speciality or healthcare need"
+                    aria-label="Search healthcare professionals">
 
             </div>
 
         </section>
 
 
-        <!-- ==================================================
-                             FILTERS
-        =================================================== -->
 
-        <section class="filter-section">
+        <!-- ================= FILTERS ================= -->
 
-            <button class="chip active">
+        <section class="doctor-filters">
+
+            <button
+                type="button"
+                class="doctor-filter active"
+                data-filter="all">
+
                 All
+
             </button>
 
-            <button class="chip">
+
+            <button
+                type="button"
+                class="doctor-filter"
+                data-filter="General Care">
+
                 General Care
+
             </button>
 
-            <button class="chip">
+
+            <button
+                type="button"
+                class="doctor-filter"
+                data-filter="Women's Health">
+
                 Women's Health
+
             </button>
 
-            <button class="chip">
+
+            <button
+                type="button"
+                class="doctor-filter"
+                data-filter="Child Care">
+
                 Child Care
+
             </button>
 
-            <button class="chip">
+
+            <button
+                type="button"
+                class="doctor-filter"
+                data-filter="Elder Care">
+
                 Elder Care
+
             </button>
 
-            <button class="chip">
+
+            <button
+                type="button"
+                class="doctor-filter"
+                data-filter="Online">
+
                 Online
-            </button>
 
-            <button class="chip">
-                Nearby
-            </button>
-
-            <button class="chip">
-                Available Today
             </button>
 
         </section>
 
 
-        <!-- ==================================================
-                         SECTION HEADING
-        =================================================== -->
 
-        <section class="results-header">
+        <!-- ================= RESULTS HEADER ================= -->
+
+        <section class="doctors-results-header">
 
             <div>
 
-                <h2>Available Healthcare Professionals</h2>
+                <span class="section-eyebrow">
+                    EXPLORE CARE
+                </span>
+
+                <h2>
+                    Healthcare professionals
+                </h2>
 
                 <p>
-                    Find healthcare support suitable for your needs.
+                    Choose from available professionals
+                    based on speciality and care needs.
                 </p>
 
             </div>
 
+
+            <div class="doctor-count">
+
+                <strong id="doctorCount">
+                    6
+                </strong>
+
+                <span>
+                    professionals
+                </span>
+
+            </div>
+
         </section>
 
 
-        <!-- ==================================================
-                         DOCTOR GRID
-        =================================================== -->
 
-        <section class="doctor-grid">
+        <!-- ================= DOCTOR GRID ================= -->
+
+        <section
+            class="doctor-grid"
+            id="doctorGrid">
 
 
             <!-- ==================================================
-                              CARD 1
+                             DOCTOR 1
             =================================================== -->
 
-            <article class="card doctor-card">
+            <article
+                class="doctor-card"
+                data-speciality="General Care"
+                data-name="Ananya Sharma"
+                data-online="true">
 
-                <div class="doctor-card-header">
+                <div class="doctor-card-top">
 
-                    <div class="doctor-image">
+                    <div class="doctor-avatar avatar-one">
 
-                        <img
-                            src="../assets/doctors/doctor-placeholder.jpg"
-                            alt="Healthcare professional placeholder">
+                        AS
 
-                        <span class="availability available">
-                            Available
+                    </div>
+
+
+                    <div class="doctor-status">
+
+                        <span class="status-dot"></span>
+
+                        Available today
+
+                    </div>
+
+                </div>
+
+
+                <div class="doctor-card-content">
+
+                    <h3>
+                        Dr. Ananya Sharma
+                    </h3>
+
+                    <p class="doctor-speciality">
+                        General Physician
+                    </p>
+
+
+                    <div class="doctor-rating">
+
+                        <i class="bi bi-star-fill"></i>
+
+                        <strong>
+                            4.8
+                        </strong>
+
+                        <span>
+                            120 reviews
                         </span>
 
                     </div>
 
-                    <div class="doctor-main-info">
 
-                        <h3 class="card-title">
-                            Healthcare Professional Name
-                        </h3>
+                    <div class="doctor-meta">
 
-                        <p class="card-subtitle">
-                            General Care
-                        </p>
+                        <span>
+                            <i class="bi bi-briefcase"></i>
+                            8+ years
+                        </span>
+
+                        <span>
+                            <i class="bi bi-translate"></i>
+                            Hindi, English
+                        </span>
+
+                    </div>
+
+
+                    <div class="doctor-location">
+
+                        <i class="bi bi-geo-alt"></i>
+
+                        Nearby Healthcare Centre
 
                     </div>
 
                 </div>
 
 
-                <div class="doctor-details">
-
-                    <div class="doctor-detail">
-
-                        <i class="bi bi-star-fill"></i>
-
-                        <span>Rating</span>
-
-                    </div>
-
-                    <div class="doctor-detail">
-
-                        <i class="bi bi-briefcase-fill"></i>
-
-                        <span>Experience</span>
-
-                    </div>
-
-                    <div class="doctor-detail">
-
-                        <i class="bi bi-geo-alt-fill"></i>
-
-                        <span>Nearby Healthcare Centre</span>
-
-                    </div>
-
-                    <div class="doctor-detail">
-
-                        <i class="bi bi-translate"></i>
-
-                        <span>Languages Spoken</span>
-
-                    </div>
-
-                </div>
-
-
-                <a href="doctor-details.html" class="btn-primary">
+                <a
+                    href="doctor-details.html"
+                    class="doctor-profile-btn">
 
                     View Profile
 
@@ -231,66 +340,90 @@
 
 
             <!-- ==================================================
-                              CARD 2
+                             DOCTOR 2
             =================================================== -->
 
-            <article class="card doctor-card">
+            <article
+                class="doctor-card"
+                data-speciality="Women's Health"
+                data-name="Meera Joshi"
+                data-online="true">
 
-                <div class="doctor-card-header">
+                <div class="doctor-card-top">
 
-                    <div class="doctor-image">
+                    <div class="doctor-avatar avatar-two">
 
-                        <img
-                            src="../assets/doctors/doctor-placeholder.jpg"
-                            alt="Healthcare professional placeholder">
+                        MJ
 
-                        <span class="availability available">
-                            Available
+                    </div>
+
+
+                    <div class="doctor-status">
+
+                        <span class="status-dot"></span>
+
+                        Available today
+
+                    </div>
+
+                </div>
+
+
+                <div class="doctor-card-content">
+
+                    <h3>
+                        Dr. Meera Joshi
+                    </h3>
+
+                    <p class="doctor-speciality">
+                        Women's Health
+                    </p>
+
+
+                    <div class="doctor-rating">
+
+                        <i class="bi bi-star-fill"></i>
+
+                        <strong>
+                            4.9
+                        </strong>
+
+                        <span>
+                            96 reviews
                         </span>
 
                     </div>
 
-                    <div class="doctor-main-info">
 
-                        <h3 class="card-title">
-                            Healthcare Professional Name
-                        </h3>
+                    <div class="doctor-meta">
 
-                        <p class="card-subtitle">
-                            Women's Health
-                        </p>
+                        <span>
+                            <i class="bi bi-briefcase"></i>
+                            10+ years
+                        </span>
+
+                        <span>
+                            <i class="bi bi-translate"></i>
+                            Hindi, English
+                        </span>
+
+                    </div>
+
+
+                    <div class="doctor-location">
+
+                        <i class="bi bi-geo-alt"></i>
+
+                        Nearby Healthcare Centre
 
                     </div>
 
                 </div>
 
 
-                <div class="doctor-details">
-
-                    <div class="doctor-detail">
-                        <i class="bi bi-star-fill"></i>
-                        <span>Rating</span>
-                    </div>
-
-                    <div class="doctor-detail">
-                        <i class="bi bi-briefcase-fill"></i>
-                        <span>Experience</span>
-                    </div>
-
-                    <div class="doctor-detail">
-                        <i class="bi bi-geo-alt-fill"></i>
-                        <span>Nearby Healthcare Centre</span>
-                    </div>
-
-                    <div class="doctor-detail">
-                        <i class="bi bi-translate"></i>
-                        <span>Languages Spoken</span>
-                    </div>
-
-                </div>
-
-
-                <a href="doctor-details.html" class="btn-primary">
+                <a
+                    href="doctor-details.html"
+                    class="doctor-profile-btn">
 
                     View Profile
 
@@ -303,66 +436,90 @@
 
 
             <!-- ==================================================
-                              CARD 3
+                             DOCTOR 3
             =================================================== -->
 
-            <article class="card doctor-card">
+            <article
+                class="doctor-card"
+                data-speciality="Child Care"
+                data-name="Rahul Patil"
+                data-online="true">
 
-                <div class="doctor-card-header">
+                <div class="doctor-card-top">
 
-                    <div class="doctor-image">
+                    <div class="doctor-avatar avatar-three">
 
-                        <img
-                            src="../assets/doctors/doctor-placeholder.jpg"
-                            alt="Healthcare professional placeholder">
+                        RP
 
-                        <span class="availability available">
-                            Available
+                    </div>
+
+
+                    <div class="doctor-status">
+
+                        <span class="status-dot"></span>
+
+                        Available today
+
+                    </div>
+
+                </div>
+
+
+                <div class="doctor-card-content">
+
+                    <h3>
+                        Dr. Rahul Patil
+                    </h3>
+
+                    <p class="doctor-speciality">
+                        Child Care Specialist
+                    </p>
+
+
+                    <div class="doctor-rating">
+
+                        <i class="bi bi-star-fill"></i>
+
+                        <strong>
+                            4.7
+                        </strong>
+
+                        <span>
+                            84 reviews
                         </span>
 
                     </div>
 
-                    <div class="doctor-main-info">
 
-                        <h3 class="card-title">
-                            Healthcare Professional Name
-                        </h3>
+                    <div class="doctor-meta">
 
-                        <p class="card-subtitle">
-                            Child Care
-                        </p>
+                        <span>
+                            <i class="bi bi-briefcase"></i>
+                            6+ years
+                        </span>
+
+                        <span>
+                            <i class="bi bi-translate"></i>
+                            Marathi, English
+                        </span>
+
+                    </div>
+
+
+                    <div class="doctor-location">
+
+                        <i class="bi bi-geo-alt"></i>
+
+                        Nearby Healthcare Centre
 
                     </div>
 
                 </div>
 
 
-                <div class="doctor-details">
-
-                    <div class="doctor-detail">
-                        <i class="bi bi-star-fill"></i>
-                        <span>Rating</span>
-                    </div>
-
-                    <div class="doctor-detail">
-                        <i class="bi bi-briefcase-fill"></i>
-                        <span>Experience</span>
-                    </div>
-
-                    <div class="doctor-detail">
-                        <i class="bi bi-geo-alt-fill"></i>
-                        <span>Nearby Healthcare Centre</span>
-                    </div>
-
-                    <div class="doctor-detail">
-                        <i class="bi bi-translate"></i>
-                        <span>Languages Spoken</span>
-                    </div>
-
-                </div>
-
-
-                <a href="doctor-details.html" class="btn-primary">
+                <a
+                    href="doctor-details.html"
+                    class="doctor-profile-btn">
 
                     View Profile
 
@@ -375,66 +532,90 @@
 
 
             <!-- ==================================================
-                              CARD 4
+                             DOCTOR 4
             =================================================== -->
 
-            <article class="card doctor-card">
+            <article
+                class="doctor-card"
+                data-speciality="Elder Care"
+                data-name="Vikram Kulkarni"
+                data-online="false">
 
-                <div class="doctor-card-header">
+                <div class="doctor-card-top">
 
-                    <div class="doctor-image">
+                    <div class="doctor-avatar avatar-four">
 
-                        <img
-                            src="../assets/doctors/doctor-placeholder.jpg"
-                            alt="Healthcare professional placeholder">
+                        VK
 
-                        <span class="availability available">
-                            Available
+                    </div>
+
+
+                    <div class="doctor-status">
+
+                        <span class="status-dot"></span>
+
+                        Available today
+
+                    </div>
+
+                </div>
+
+
+                <div class="doctor-card-content">
+
+                    <h3>
+                        Dr. Vikram Kulkarni
+                    </h3>
+
+                    <p class="doctor-speciality">
+                        Elder Care Specialist
+                    </p>
+
+
+                    <div class="doctor-rating">
+
+                        <i class="bi bi-star-fill"></i>
+
+                        <strong>
+                            4.8
+                        </strong>
+
+                        <span>
+                            73 reviews
                         </span>
 
                     </div>
 
-                    <div class="doctor-main-info">
 
-                        <h3 class="card-title">
-                            Healthcare Professional Name
-                        </h3>
+                    <div class="doctor-meta">
 
-                        <p class="card-subtitle">
-                            Elder Care
-                        </p>
+                        <span>
+                            <i class="bi bi-briefcase"></i>
+                            12+ years
+                        </span>
+
+                        <span>
+                            <i class="bi bi-translate"></i>
+                            Marathi, Hindi
+                        </span>
+
+                    </div>
+
+
+                    <div class="doctor-location">
+
+                        <i class="bi bi-geo-alt"></i>
+
+                        Nearby Healthcare Centre
 
                     </div>
 
                 </div>
 
 
-                <div class="doctor-details">
-
-                    <div class="doctor-detail">
-                        <i class="bi bi-star-fill"></i>
-                        <span>Rating</span>
-                    </div>
-
-                    <div class="doctor-detail">
-                        <i class="bi bi-briefcase-fill"></i>
-                        <span>Experience</span>
-                    </div>
-
-                    <div class="doctor-detail">
-                        <i class="bi bi-geo-alt-fill"></i>
-                        <span>Nearby Healthcare Centre</span>
-                    </div>
-
-                    <div class="doctor-detail">
-                        <i class="bi bi-translate"></i>
-                        <span>Languages Spoken</span>
-                    </div>
-
-                </div>
-
-
-                <a href="doctor-details.html" class="btn-primary">
+                <a
+                    href="doctor-details.html"
+                    class="doctor-profile-btn">
 
                     View Profile
 
@@ -447,66 +628,90 @@
 
 
             <!-- ==================================================
-                              CARD 5
+                             DOCTOR 5
             =================================================== -->
 
-            <article class="card doctor-card">
+            <article
+                class="doctor-card"
+                data-speciality="General Care"
+                data-name="Neha Deshmukh"
+                data-online="true">
 
-                <div class="doctor-card-header">
+                <div class="doctor-card-top">
 
-                    <div class="doctor-image">
+                    <div class="doctor-avatar avatar-five">
 
-                        <img
-                            src="../assets/doctors/doctor-placeholder.jpg"
-                            alt="Healthcare professional placeholder">
+                        ND
 
-                        <span class="availability available">
-                            Available
+                    </div>
+
+
+                    <div class="doctor-status">
+
+                        <span class="status-dot"></span>
+
+                        Available today
+
+                    </div>
+
+                </div>
+
+
+                <div class="doctor-card-content">
+
+                    <h3>
+                        Dr. Neha Deshmukh
+                    </h3>
+
+                    <p class="doctor-speciality">
+                        General Physician
+                    </p>
+
+
+                    <div class="doctor-rating">
+
+                        <i class="bi bi-star-fill"></i>
+
+                        <strong>
+                            4.6
+                        </strong>
+
+                        <span>
+                            61 reviews
                         </span>
 
                     </div>
 
-                    <div class="doctor-main-info">
 
-                        <h3 class="card-title">
-                            Healthcare Professional Name
-                        </h3>
+                    <div class="doctor-meta">
 
-                        <p class="card-subtitle">
-                            General Care
-                        </p>
+                        <span>
+                            <i class="bi bi-briefcase"></i>
+                            7+ years
+                        </span>
+
+                        <span>
+                            <i class="bi bi-translate"></i>
+                            Hindi, English
+                        </span>
+
+                    </div>
+
+
+                    <div class="doctor-location">
+
+                        <i class="bi bi-geo-alt"></i>
+
+                        Nearby Healthcare Centre
 
                     </div>
 
                 </div>
 
 
-                <div class="doctor-details">
-
-                    <div class="doctor-detail">
-                        <i class="bi bi-star-fill"></i>
-                        <span>Rating</span>
-                    </div>
-
-                    <div class="doctor-detail">
-                        <i class="bi bi-briefcase-fill"></i>
-                        <span>Experience</span>
-                    </div>
-
-                    <div class="doctor-detail">
-                        <i class="bi bi-geo-alt-fill"></i>
-                        <span>Nearby Healthcare Centre</span>
-                    </div>
-
-                    <div class="doctor-detail">
-                        <i class="bi bi-translate"></i>
-                        <span>Languages Spoken</span>
-                    </div>
-
-                </div>
-
-
-                <a href="doctor-details.html" class="btn-primary">
+                <a
+                    href="doctor-details.html"
+                    class="doctor-profile-btn">
 
                     View Profile
 
@@ -519,66 +724,90 @@
 
 
             <!-- ==================================================
-                              CARD 6
+                             DOCTOR 6
             =================================================== -->
 
-            <article class="card doctor-card">
+            <article
+                class="doctor-card"
+                data-speciality="General Care"
+                data-name="Arjun More"
+                data-online="true">
 
-                <div class="doctor-card-header">
+                <div class="doctor-card-top">
 
-                    <div class="doctor-image">
+                    <div class="doctor-avatar avatar-six">
 
-                        <img
-                            src="../assets/doctors/doctor-placeholder.jpg"
-                            alt="Healthcare professional placeholder">
+                        AM
 
-                        <span class="availability available">
-                            Available
+                    </div>
+
+
+                    <div class="doctor-status">
+
+                        <span class="status-dot"></span>
+
+                        Available today
+
+                    </div>
+
+                </div>
+
+
+                <div class="doctor-card-content">
+
+                    <h3>
+                        Dr. Arjun More
+                    </h3>
+
+                    <p class="doctor-speciality">
+                        General Physician
+                    </p>
+
+
+                    <div class="doctor-rating">
+
+                        <i class="bi bi-star-fill"></i>
+
+                        <strong>
+                            4.7
+                        </strong>
+
+                        <span>
+                            58 reviews
                         </span>
 
                     </div>
 
-                    <div class="doctor-main-info">
 
-                        <h3 class="card-title">
-                            Healthcare Professional Name
-                        </h3>
+                    <div class="doctor-meta">
 
-                        <p class="card-subtitle">
-                            General Care
-                        </p>
+                        <span>
+                            <i class="bi bi-briefcase"></i>
+                            9+ years
+                        </span>
+
+                        <span>
+                            <i class="bi bi-translate"></i>
+                            Marathi, English
+                        </span>
+
+                    </div>
+
+
+                    <div class="doctor-location">
+
+                        <i class="bi bi-geo-alt"></i>
+
+                        Nearby Healthcare Centre
 
                     </div>
 
                 </div>
 
 
-                <div class="doctor-details">
-
-                    <div class="doctor-detail">
-                        <i class="bi bi-star-fill"></i>
-                        <span>Rating</span>
-                    </div>
-
-                    <div class="doctor-detail">
-                        <i class="bi bi-briefcase-fill"></i>
-                        <span>Experience</span>
-                    </div>
-
-                    <div class="doctor-detail">
-                        <i class="bi bi-geo-alt-fill"></i>
-                        <span>Nearby Healthcare Centre</span>
-                    </div>
-
-                    <div class="doctor-detail">
-                        <i class="bi bi-translate"></i>
-                        <span>Languages Spoken</span>
-                    </div>
-
-                </div>
-
-
-                <a href="doctor-details.html" class="btn-primary">
+                <a
+                    href="doctor-details.html"
+                    class="doctor-profile-btn">
 
                     View Profile
 
@@ -590,8 +819,173 @@
 
 
         </section>
+
+
+
+        <!-- ================= NO RESULTS ================= -->
+
+        <section
+            class="doctors-empty"
+            id="doctorEmpty"
+            hidden>
+
+            <div class="doctors-empty-icon">
+
+                <i class="bi bi-search"></i>
+
+            </div>
+
+            <h3>
+                No healthcare professionals found
+            </h3>
+
+            <p>
+                Try a different name or speciality.
+            </p>
+
+        </section>
+
 
     </main>
+
+
+
+    <!-- ==================================================
+                         JAVASCRIPT
+    =================================================== -->
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const searchInput =
+                document.getElementById("doctorSearch");
+
+            const filters =
+                document.querySelectorAll(".doctor-filter");
+
+            const cards =
+                document.querySelectorAll(".doctor-card");
+
+            const count =
+                document.getElementById("doctorCount");
+
+            const empty =
+                document.getElementById("doctorEmpty");
+
+
+            let activeFilter = "all";
+
+
+            function filterDoctors() {
+
+                const search =
+                    searchInput.value
+                        .trim()
+                        .toLowerCase();
+
+
+                let visibleCount = 0;
+
+
+                cards.forEach(function (card) {
+
+                    const name =
+                        card.dataset.name.toLowerCase();
+
+                    const speciality =
+                        card.dataset.speciality.toLowerCase();
+
+
+                    const matchesSearch =
+                        !search ||
+                        name.includes(search) ||
+                        speciality.includes(search);
+
+
+                    let matchesFilter = true;
+
+
+                    if (activeFilter !== "all") {
+
+                        if (activeFilter === "Online") {
+
+                            matchesFilter =
+                                card.dataset.online === "true";
+
+                        } else {
+
+                            matchesFilter =
+                                card.dataset.speciality === activeFilter;
+
+                        }
+
+                    }
+
+
+                    const visible =
+                        matchesSearch &&
+                        matchesFilter;
+
+
+                    card.hidden = !visible;
+
+
+                    if (visible) {
+                        visibleCount++;
+                    }
+
+                });
+
+
+                count.textContent =
+                    visibleCount;
+
+
+                empty.hidden =
+                    visibleCount !== 0;
+
+            }
+
+
+            searchInput.addEventListener(
+                "input",
+                filterDoctors
+            );
+
+
+            filters.forEach(function (filter) {
+
+                filter.addEventListener(
+                    "click",
+                    function () {
+
+                        filters.forEach(function (item) {
+
+                            item.classList.remove("active");
+
+                        });
+
+
+                        this.classList.add("active");
+
+
+                        activeFilter =
+                            this.dataset.filter;
+
+
+                        filterDoctors();
+
+                    }
+                );
+
+            });
+
+
+        });
+
+    </script>
+
 
 </body>
 

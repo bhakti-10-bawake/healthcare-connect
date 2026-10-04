@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Profile | Healthcare Connect</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <!-- Existing CSS Architecture -->
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/utilities.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+
+<body class="profile-page">
+
+    <!-- ==================================================
+                         HEADER
+    =================================================== -->
+
+    <header class="dashboard-header">
+
+        <div class="logo-section">
+
+            <i class="bi bi-heart-pulse-fill"></i>
+
+            <div>
+                <h2>Healthcare Connect</h2>
+                <p>Your Digital Health Partner</p>
+            </div>
+
+        </div>
+
+        <div class="header-actions">
+
+            <a
+                href="dashboard.html"
+                class="icon-btn"
+                aria-label="Dashboard"
+            >
+                <i class="bi bi-house"></i>
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- ==================================================
+                         MAIN CONTENT
+    =================================================== -->
+
+    <main class="profile-container">
+
+        <!-- PAGE HEADER -->
+
+        <section class="profile-page-header">
+
+            <a
+                href="dashboard.html"
+                class="profile-back-btn"
+            >
+                <i class="bi bi-arrow-left"></i>
+                Back to Dashboard
+            </a>
+
+            <h1>My Profile</h1>
+
+            <p>
+                Manage your personal information and healthcare preferences.
+            </p>
+
+        </section>
+
+
+        <!-- ==================================================
+                         PROFILE SUMMARY
+        =================================================== -->
+
+        <section class="card profile-summary-card">
+
+            <div class="profile-avatar">
+
+                <i class="bi bi-person-fill"></i>
+
+            </div>
+
+            <div class="profile-summary-info">
+
+                <h2 id="profileDisplayName">
+                    Bhakti Bawake
+                </h2>
+
+                <p>
+                    Healthcare Connect User
+                </p>
+
+                <span class="profile-status">
+                    <i class="bi bi-check-circle-fill"></i>
+                    Profile Active
+                </span>
+
+            </div>
+
+            <button
+                type="button"
+                class="profile-edit-btn"
+                id="editProfileButton"
+            >
+                <i class="bi bi-pencil"></i>
+                Edit Profile
+            </button>
+
+        </section>
+
+
+        <!-- ==================================================
+                         PERSONAL INFORMATION
+        =================================================== -->
+
+        <section class="card profile-section-card">
+
+            <div class="profile-section-heading">
+
+                <div class="profile-section-icon">
+                    <i class="bi bi-person"></i>
+                </div>
+
+                <div>
+                    <h2>Personal Information</h2>
+                    <p>
+                        Your basic personal details
+                    </p>
+                </div>
+
+            </div>
+
+
+            <form id="profileForm">
+
+                <div class="profile-form-grid">
+
+                    <div class="profile-field">
+
+                        <label for="fullName">
+                            Full Name
+                        </label>
+
+                        <div class="profile-input">
+
+                            <i class="bi bi-person"></i>
+
+                            <input
+                                type="text"
+                                id="fullName"
+                                value="Bhakti Bawake"
+                                disabled
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="profile-field">
+
+                        <label for="email">
+                            Email Address
+                        </label>
+
+                        <div class="profile-input">
+
+                            <i class="bi bi-envelope"></i>
+
+                            <input
+                                type="email"
+                                id="email"
+                                value="user@example.com"
+                                disabled
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="profile-field">
+
+                        <label for="phone">
+                            Phone Number
+                        </label>
+
+                        <div class="profile-input">
+
+                            <i class="bi bi-telephone"></i>
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                value="+91 00000 00000"
+                                disabled
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="profile-field">
+
+                        <label for="dateOfBirth">
+                            Date of Birth
+                        </label>
+
+                        <div class="profile-input">
+
+                            <i class="bi bi-calendar"></i>
+
+                            <input
+                                type="date"
+                                id="dateOfBirth"
+                                value="2005-01-01"
+                                disabled
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="profile-field">
+
+                        <label for="gender">
+                            Gender
+                        </label>
+
+                        <div class="profile-input">
+
+                            <i class="bi bi-person"></i>
+
+                            <select
+                                id="gender"
+                                disabled
+                            >
+                                <option>Prefer not to say</option>
+                                <option>Female</option>
+                                <option>Male</option>
+                                <option>Other</option>
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="profile-field">
+
+                        <label for="location">
+                            Location
+                        </label>
+
+                        <div class="profile-input">
+
+                            <i class="bi bi-geo-alt"></i>
+
+                            <input
+                                type="text"
+                                id="location"
+                                value="Your Location"
+                                disabled
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="profile-form-actions"
+                    id="profileFormActions"
+                    hidden
+                >
+
+                    <button
+                        type="button"
+                        class="profile-cancel-btn"
+                        id="cancelEdit"
+                    >
+                        Cancel
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="btn-primary"
+                    >
+                        <i class="bi bi-check-lg"></i>
+                        Save Changes
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+
+        <!-- ==================================================
+                         HEALTHCARE PREFERENCES
+        =================================================== -->
+
+        <section class="card profile-section-card">
+
+            <div class="profile-section-heading">
+
+                <div class="profile-section-icon">
+                    <i class="bi bi-heart-pulse"></i>
+                </div>
+
+                <div>
+                    <h2>Healthcare Preferences</h2>
+                    <p>
+                        Manage your healthcare preferences
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="profile-preference-list">
+
+                <div class="profile-preference-item">
+
+                    <div class="preference-icon">
+                        <i class="bi bi-bell"></i>
+                    </div>
+
+                    <div class="preference-content">
+
+                        <h3>Appointment Reminders</h3>
+
+                        <p>
+                            Receive reminders for upcoming appointments.
+                        </p>
+
+                    </div>
+
+                    <label class="toggle-switch">
+
+                        <input
+                            type="checkbox"
+                            checked
+                        >
+
+                        <span></span>
+
+                    </label>
+
+                </div>
+
+
+                <div class="profile-preference-item">
+
+                    <div class="preference-icon">
+                        <i class="bi bi-capsule"></i>
+                    </div>
+
+                    <div class="preference-content">
+
+                        <h3>Medicine Reminders</h3>
+
+                        <p>
+                            Get reminders for scheduled medicines.
+                        </p>
+
+                    </div>
+
+                    <label class="toggle-switch">
+
+                        <input
+                            type="checkbox"
+                            checked
+                        >
+
+                        <span></span>
+
+                    </label>
+
+                </div>
+
+
+                <div class="profile-preference-item">
+
+                    <div class="preference-icon">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+
+                    <div class="preference-content">
+
+                        <h3>Health Record Privacy</h3>
+
+                        <p>
+                            Keep your health information private.
+                        </p>
+
+                    </div>
+
+                    <span class="privacy-status">
+                        Protected
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+                         ACCOUNT ACTIONS
+        =================================================== -->
+
+        <section class="card profile-section-card">
+
+            <div class="profile-section-heading">
+
+                <div class="profile-section-icon">
+                    <i class="bi bi-gear"></i>
+                </div>
+
+                <div>
+                    <h2>Account</h2>
+                    <p>
+                        Manage your account
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="profile-account-actions">
+
+                <a href="#" class="profile-action">
+
+                    <span>
+                        <i class="bi bi-lock"></i>
+                        Change Password
+                    </span>
+
+                    <i class="bi bi-chevron-right"></i>
+
+                </a>
+
+
+                <a href="#" class="profile-action">
+
+                    <span>
+                        <i class="bi bi-question-circle"></i>
+                        Help & Support
+                    </span>
+
+                    <i class="bi bi-chevron-right"></i>
+
+                </a>
+
+
+                <a
+                    href="login.html"
+                    class="profile-action logout-action"
+                >
+
+                    <span>
+                        <i class="bi bi-box-arrow-right"></i>
+                        Log Out
+                    </span>
+
+                    <i class="bi bi-chevron-right"></i>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ==================================================
+                         JAVASCRIPT
+    =================================================== -->
+
+    <script>
+
+        const editButton =
+            document.getElementById("editProfileButton");
+
+        const cancelButton =
+            document.getElementById("cancelEdit");
+
+        const profileForm =
+            document.getElementById("profileForm");
+
+        const formActions =
+            document.getElementById("profileFormActions");
+
+        const editableFields = [
+            "fullName",
+            "email",
+            "phone",
+            "dateOfBirth",
+            "gender",
+            "location"
+        ];
+
+
+        function setEditingState(editing) {
+
+            editableFields.forEach(id => {
+
+                document
+                    .getElementById(id)
+                    .disabled = !editing;
+
+            });
+
+            formActions.hidden = !editing;
+
+            editButton.hidden = editing;
+
+        }
+
+
+        editButton.addEventListener(
+            "click",
+            function() {
+
+                setEditingState(true);
+
+            }
+        );
+
+
+        cancelButton.addEventListener(
+            "click",
+            function() {
+
+                setEditingState(false);
+
+            }
+        );
+
+
+        profileForm.addEventListener(
+            "submit",
+            function(event) {
+
+                event.preventDefault();
+
+                const name =
+                    document.getElementById("fullName").value;
+
+                document
+                    .getElementById("profileDisplayName")
+                    .textContent = name;
+
+                setEditingState(false);
+
+            }
+        );
+
+    </script>
+
+</body>
+
+</html>

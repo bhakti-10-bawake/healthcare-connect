@@ -4,13 +4,19 @@
 <head>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Healthcare Professional | Healthcare Connect</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Doctor Details | Healthcare Connect</title>
 
     <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
 
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
@@ -21,7 +27,7 @@
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <!-- CSS -->
+    <!-- Existing CSS Architecture -->
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/variables.css">
     <link rel="stylesheet" href="../css/components.css">
@@ -30,31 +36,38 @@
 
 </head>
 
+
 <body>
 
     <!-- ==================================================
                          PAGE HEADER
     =================================================== -->
 
-    <header class="page-header">
+    <header class="doctor-details-header">
 
-        <a href="doctors.html" class="back-btn">
+        <a
+            href="doctors.html"
+            class="doctor-back-btn"
+            aria-label="Back to doctors">
 
             <i class="bi bi-arrow-left"></i>
 
         </a>
 
-        <div class="header-content">
+        <div>
 
-            <h1>Healthcare Professional</h1>
+            <h1>
+                Doctor Details
+            </h1>
 
             <p>
-                View professional details and available healthcare services.
+                View professional information and available services.
             </p>
 
         </div>
 
     </header>
+
 
 
     <!-- ==================================================
@@ -72,40 +85,59 @@
 
             <div class="doctor-profile-top">
 
+
+                <!-- Doctor Avatar -->
+
                 <div class="doctor-profile-image">
 
-                    <img
-                        src="../assets/doctors/doctor-placeholder.jpg"
-                        alt="Healthcare professional placeholder">
+                    <div class="doctor-avatar-placeholder">
+
+                        <i class="bi bi-person-heart"></i>
+
+                    </div>
 
                     <span class="profile-availability">
+
+                        <span class="availability-dot"></span>
+
                         Available
+
                     </span>
 
                 </div>
 
 
+                <!-- Doctor Information -->
+
                 <div class="doctor-profile-info">
 
                     <span class="profile-label">
-                        Healthcare Professional
+                        GENERAL PHYSICIAN
                     </span>
 
                     <h2>
-                        Healthcare Professional Name
+                        Dr. Ananya Sharma
                     </h2>
 
                     <p class="profile-service">
-                        General Care
+                        General Physician
                     </p>
+
 
                     <div class="profile-rating">
 
                         <i class="bi bi-star-fill"></i>
 
-                        <span>Rating</span>
+                        <strong>
+                            4.8
+                        </strong>
+
+                        <span>
+                            (120 reviews)
+                        </span>
 
                     </div>
+
 
                     <div class="profile-location">
 
@@ -122,14 +154,13 @@
             </div>
 
 
-            <div class="profile-actions">
+            <!-- Main Booking Button -->
 
-                <!-- This will connect to your teammate's
-                     Book Appointment page later -->
+            <div class="profile-actions">
 
                 <a
                     href="book-appointment.html"
-                    class="btn-primary">
+                    class="btn-primary doctor-book-btn">
 
                     <i class="bi bi-calendar2-check"></i>
 
@@ -144,11 +175,13 @@
 
 
         <!-- ==================================================
-                         QUICK INFORMATION
+                       QUICK INFORMATION
         =================================================== -->
 
         <section class="doctor-info-grid">
 
+
+            <!-- Experience -->
 
             <article class="card doctor-info-card">
 
@@ -165,13 +198,15 @@
                     </span>
 
                     <strong>
-                        Experience
+                        8+ Years
                     </strong>
 
                 </div>
 
             </article>
 
+
+            <!-- Languages -->
 
             <article class="card doctor-info-card">
 
@@ -188,13 +223,15 @@
                     </span>
 
                     <strong>
-                        Languages Spoken
+                        English, Hindi, Marathi
                     </strong>
 
                 </div>
 
             </article>
 
+
+            <!-- Consultation -->
 
             <article class="card doctor-info-card">
 
@@ -211,13 +248,15 @@
                     </span>
 
                     <strong>
-                        Consultation Timing
+                        09:00 AM – 05:00 PM
                     </strong>
 
                 </div>
 
             </article>
 
+
+            <!-- Location -->
 
             <article class="card doctor-info-card">
 
@@ -247,7 +286,7 @@
 
 
         <!-- ==================================================
-                         ABOUT
+                             ABOUT
         =================================================== -->
 
         <section class="card details-section">
@@ -263,7 +302,7 @@
                 <div>
 
                     <h2>
-                        About
+                        About the Doctor
                     </h2>
 
                     <p>
@@ -274,14 +313,14 @@
 
             </div>
 
+
             <p class="details-text">
 
-                This healthcare professional provides general healthcare
-                guidance and consultation services for individuals and
-                families in the surrounding community.
-
-                The service is designed to make basic healthcare support
-                more accessible to people in rural and underserved areas.
+                Dr. Ananya Sharma is a general physician providing
+                primary healthcare consultation and preventive health
+                guidance. The platform is designed to help users
+                discover healthcare professionals and access
+                consultations more conveniently.
 
             </p>
 
@@ -290,7 +329,7 @@
 
 
         <!-- ==================================================
-                         SERVICES
+                         HEALTHCARE SERVICES
         =================================================== -->
 
         <section class="card details-section">
@@ -330,6 +369,7 @@
 
                 </div>
 
+
                 <div class="service-item">
 
                     <i class="bi bi-check-circle-fill"></i>
@@ -340,6 +380,7 @@
 
                 </div>
 
+
                 <div class="service-item">
 
                     <i class="bi bi-check-circle-fill"></i>
@@ -349,6 +390,7 @@
                     </span>
 
                 </div>
+
 
                 <div class="service-item">
 
@@ -399,9 +441,7 @@
 
                 <div class="availability-row">
 
-                    <span>
-                        Monday
-                    </span>
+                    <span>Monday</span>
 
                     <strong>
                         09:00 AM – 05:00 PM
@@ -412,9 +452,7 @@
 
                 <div class="availability-row">
 
-                    <span>
-                        Tuesday
-                    </span>
+                    <span>Tuesday</span>
 
                     <strong>
                         09:00 AM – 05:00 PM
@@ -425,9 +463,7 @@
 
                 <div class="availability-row">
 
-                    <span>
-                        Wednesday
-                    </span>
+                    <span>Wednesday</span>
 
                     <strong>
                         09:00 AM – 05:00 PM
@@ -438,9 +474,7 @@
 
                 <div class="availability-row">
 
-                    <span>
-                        Thursday
-                    </span>
+                    <span>Thursday</span>
 
                     <strong>
                         09:00 AM – 05:00 PM
@@ -451,9 +485,7 @@
 
                 <div class="availability-row">
 
-                    <span>
-                        Friday
-                    </span>
+                    <span>Friday</span>
 
                     <strong>
                         09:00 AM – 05:00 PM
@@ -464,9 +496,7 @@
 
                 <div class="availability-row">
 
-                    <span>
-                        Saturday
-                    </span>
+                    <span>Saturday</span>
 
                     <strong>
                         09:00 AM – 01:00 PM
@@ -477,9 +507,7 @@
 
                 <div class="availability-row unavailable">
 
-                    <span>
-                        Sunday
-                    </span>
+                    <span>Sunday</span>
 
                     <strong>
                         Not Available
@@ -494,7 +522,7 @@
 
 
         <!-- ==================================================
-                         LOCATION
+                         HEALTHCARE CENTRE
         =================================================== -->
 
         <section class="card details-section">
@@ -529,9 +557,10 @@
                 </h3>
 
                 <p>
-                    Local healthcare facility serving the surrounding
-                    rural community.
+                    Local healthcare facility serving the
+                    surrounding community.
                 </p>
+
 
                 <div class="centre-meta">
 
@@ -542,6 +571,7 @@
                         Nearby Location
 
                     </span>
+
 
                     <span>
 
@@ -575,11 +605,14 @@
 
             </a>
 
+
             <a
                 href="doctors.html"
                 class="btn-secondary">
 
-                Back to Healthcare Professionals
+                <i class="bi bi-arrow-left"></i>
+
+                Back to Doctors
 
             </a>
 
@@ -587,6 +620,13 @@
 
 
     </main>
+
+
+    <!-- ==================================================
+                         JAVASCRIPT
+    =================================================== -->
+
+    <script src="../js/app.js"></script>
 
 </body>
 

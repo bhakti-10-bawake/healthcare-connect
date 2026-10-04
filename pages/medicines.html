@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Medicines | Healthcare Connect</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <!-- Existing CSS Architecture -->
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/utilities.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+
+<body class="medicines-page">
+
+    <!-- ==================================================
+                         HEADER
+    =================================================== -->
+
+    <header class="dashboard-header">
+
+        <div class="logo-section">
+
+            <i class="bi bi-heart-pulse-fill"></i>
+
+            <div>
+                <h2>Healthcare Connect</h2>
+                <p>Your Digital Health Partner</p>
+            </div>
+
+        </div>
+
+        <div class="header-actions">
+
+            <a
+                href="dashboard.html"
+                class="icon-btn"
+                aria-label="Dashboard"
+            >
+                <i class="bi bi-house"></i>
+            </a>
+
+            <a
+                href="profile.html"
+                class="icon-btn"
+                aria-label="Profile"
+            >
+                <i class="bi bi-person"></i>
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- ==================================================
+                         MAIN CONTENT
+    =================================================== -->
+
+    <main class="medicines-container">
+
+
+        <!-- ================= PAGE HEADER ================= -->
+
+        <section class="medicines-page-header">
+
+            <div>
+
+                <a
+                    href="dashboard.html"
+                    class="medicines-back-btn"
+                >
+                    <i class="bi bi-arrow-left"></i>
+                    Back to Dashboard
+                </a>
+
+                <h1>Medicines</h1>
+
+                <p>
+                    Find medicine information and manage your
+                    healthcare needs.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SEARCH ================= -->
+
+        <section class="medicine-search-section">
+
+            <div class="search-box">
+
+                <i class="bi bi-search"></i>
+
+                <input
+                    type="search"
+                    id="medicineSearch"
+                    placeholder="Search medicines..."
+                    aria-label="Search medicines"
+                >
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CATEGORIES ================= -->
+
+        <section class="medicine-category-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <h2>Categories</h2>
+
+                    <p class="card-subtitle">
+                        Browse medicines by category
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="medicine-category-list">
+
+                <button
+                    type="button"
+                    class="medicine-category active"
+                    data-category="all"
+                >
+                    <i class="bi bi-grid"></i>
+                    <span>All</span>
+                </button>
+
+
+                <button
+                    type="button"
+                    class="medicine-category"
+                    data-category="Tablet"
+                >
+                    <i class="bi bi-capsule"></i>
+                    <span>Tablets</span>
+                </button>
+
+
+                <button
+                    type="button"
+                    class="medicine-category"
+                    data-category="Capsule"
+                >
+                    <i class="bi bi-capsule-pill"></i>
+                    <span>Capsules</span>
+                </button>
+
+
+                <button
+                    type="button"
+                    class="medicine-category"
+                    data-category="Syrup"
+                >
+                    <i class="bi bi-droplet"></i>
+                    <span>Syrups</span>
+                </button>
+
+
+                <button
+                    type="button"
+                    class="medicine-category"
+                    data-category="Ointment"
+                >
+                    <i class="bi bi-bandaid"></i>
+                    <span>Ointments</span>
+                </button>
+
+
+                <button
+                    type="button"
+                    class="medicine-category"
+                    data-category="Injection"
+                >
+                    <i class="bi bi-prescription2"></i>
+                    <span>Injections</span>
+                </button>
+
+
+                <button
+                    type="button"
+                    class="medicine-category"
+                    data-category="First Aid"
+                >
+                    <i class="bi bi-first-aid"></i>
+                    <span>First Aid</span>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+                       MEDICINE CATALOGUE
+        =================================================== -->
+
+        <section class="medicine-catalogue">
+
+            <div class="section-heading">
+
+                <div>
+                    <h2>Medicine Catalogue</h2>
+
+                    <p class="card-subtitle">
+                        Browse available medicines
+                    </p>
+                </div>
+
+                <span
+                    class="card-badge"
+                    id="medicineCount"
+                >
+                    12 Medicines
+                </span>
+
+            </div>
+
+
+            <div
+                class="medicine-grid"
+                id="medicineGrid"
+            >
+
+
+                <!-- ================= MEDICINE 01 ================= -->
+
+                <article
+                    class="card medicine-card"
+                    data-category="Tablet"
+                    data-name="Healora Tablet"
+                >
+
+                    <div class="medicine-image">
+
+                        <img
+                            src="../assets/medicines/medicine_01.webp"
+                            alt="Healora Tablet"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                        >
+
+                        <div class="medicine-image-fallback">
+                            <i class="bi bi-capsule"></i>
+                        </div>
+
+                    </div>
+
+
+                    <div class="medicine-card-content">
+
+                        <div class="medicine-card-top">
+
+                            <span class="medicine-category-badge">
+                                Tablet
+                            </span>
+
+                            <span class="availability-badge available">
+                                Available
+                            </span>
+
+                        </div>
+
+                        <h3>Healora Tablet</h3>
+
+                        <p class="generic-name">
+                            Demo Generic Compound A
+                        </p>
+
+                        <p class="medicine-description">
+                            Fictional oral medicine placeholder
+                            for the medicine catalogue.
+                        </p>
+
+                        <div class="medicine-card-footer">
+
+                            <span class="prescription-status">
+                                <i class="bi bi-check-circle"></i>
+                                Over-the-counter
+                            </span>
+
+                            <button
+                                type="button"
+                                class="medicine-details-btn"
+                            >
+                                View Details
+                                <i class="bi bi-arrow-right"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ================= MEDICINE 02 ================= -->
+
+                <article
+                    class="card medicine-card"
+                    data-category="Tablet"
+                    data-name="Fevernil Tablet"
+                >
+
+                    <div class="medicine-image">
+
+                        <img
+                            src="../assets/medicines/medicine_02.webp"
+                            alt="Fevernil Tablet"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                        >
+
+                        <div class="medicine-image-fallback">
+                            <i class="bi bi-capsule"></i>
+                        </div>
+
+                    </div>
+
+
+                    <div class="medicine-card-content">
+
+                        <div class="medicine-card-top">
+
+                            <span class="medicine-category-badge">
+                                Tablet
+                            </span>
+
+                            <span class="availability-badge limited">
+                                Limited Stock
+                            </span>
+
+                        </div>
+
+                        <h3>Fevernil Tablet</h3>
+
+                        <p class="generic-name">
+                            Demo Generic Compound B
+                        </p>
+
+                        <p class="medicine-description">
+                            Fictional tablet for demonstrating
+                            a medicine catalogue entry.
+                        </p>
+
+                        <div class="medicine-card-footer">
+
+                            <span class="prescription-status">
+                                <i class="bi bi-check-circle"></i>
+                                Over-the-counter
+                            </span>
+
+                            <button
+                                type="button"
+                                class="medicine-details-btn"
+                            >
+                                View Details
+                                <i class="bi bi-arrow-right"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ================= MEDICINE 03 ================= -->
+
+                <article
+                    class="card medicine-card"
+                    data-category="Capsule"
+                    data-name="Respira Capsule"
+                >
+
+                    <div class="medicine-image">
+
+                        <img
+                            src="../assets/medicines/medicine_03.webp"
+                            alt="Respira Capsule"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                        >
+
+                        <div class="medicine-image-fallback">
+                            <i class="bi bi-capsule-pill"></i>
+                        </div>
+
+                    </div>
+
+
+                    <div class="medicine-card-content">
+
+                        <div class="medicine-card-top">
+
+                            <span class="medicine-category-badge">
+                                Capsule
+                            </span>
+
+                            <span class="availability-badge available">
+                                Available
+                            </span>
+
+                        </div>
+
+                        <h3>Respira Capsule</h3>
+
+                        <p class="generic-name">
+                            Demo Generic Compound C
+                        </p>
+
+                        <p class="medicine-description">
+                            Fictional capsule representing a
+                            prescription-oriented medicine.
+                        </p>
+
+                        <div class="medicine-card-footer">
+
+                            <span class="prescription-status prescription">
+                                <i class="bi bi-file-earmark-medical"></i>
+                                Prescription Required
+                            </span>
+
+                            <button
+                                type="button"
+                                class="medicine-details-btn"
+                            >
+                                View Details
+                                <i class="bi bi-arrow-right"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ================= MEDICINE 04 ================= -->
+
+                <article
+                    class="card medicine-card"
+                    data-category="Capsule"
+                    data-name="NutriCare Capsule"
+                >
+
+                    <div class="medicine-image">
+
+                        <img
+                            src="../assets/medicines/medicine_04.webp"
+                            alt="NutriCare Capsule"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                        >
+
+                        <div class="medicine-image-fallback">
+                            <i class="bi bi-capsule-pill"></i>
+                        </div>
+
+                    </div>
+
+
+                    <div class="medicine-card-content">
+
+                        <div class="medicine-card-top">
+
+                            <span class="medicine-category-badge">
+                                Capsule
+                            </span>
+
+                            <span class="availability-badge available">
+                                Available
+                            </span>
+
+                        </div>
+
+                        <h3>NutriCare Capsule</h3>
+
+                        <p class="generic-name">
+                            Demo Generic Compound D
+                        </p>
+
+                        <p class="medicine-description">
+                            Fictional capsule for demonstrating
+                            nutritional-support information.
+                        </p>
+
+                        <div class="medicine-card-footer">
+
+                            <span class="prescription-status">
+                                <i class="bi bi-check-circle"></i>
+                                Over-the-counter
+                            </span>
+
+                            <button
+                                type="button"
+                                class="medicine-details-btn"
+                            >
+                                View Details
+                                <i class="bi bi-arrow-right"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ================= MEDICINE 05 ================= -->
+
+                <article
+                    class="card medicine-card"
+                    data-category="Syrup"
+                    data-name="CoughEase Syrup"
+                >
+
+                    <div class="medicine-image">
+
+                        <img
+                            src="../assets/medicines/medicine_05.webp"
+                            alt="CoughEase Syrup"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                        >
+
+                        <div class="medicine-image-fallback">
+                            <i class="bi bi-droplet"></i>
+                        </div>
+
+                    </div>
+
+
+                    <div class="medicine-card-content">
+
+                        <div class="medicine-card-top">
+
+                            <span class="medicine-category-badge">
+                                Syrup
+                            </span>
+
+                            <span class="availability-badge limited">
+                                Limited Stock
+                            </span>
+
+                        </div>
+
+                        <h3>CoughEase Syrup</h3>
+
+                        <p class="generic-name">
+                            Demo Generic Compound E
+                        </p>
+
+                        <p class="medicine-description">
+                            Fictional liquid medicine for a
+                            cough-care catalogue placeholder.
+                        </p>
+
+                        <div class="medicine-card-footer">
+
+                            <span class="prescription-status">
+                                <i class="bi bi-check-circle"></i>
+                                Over-the-counter
+                            </span>
+
+                            <button
+                                type="button"
+                                class="medicine-details-btn"
+                            >
+                                View Details
+                                <i class="bi bi-arrow-right"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ================= MEDICINE 06 ================= -->
+
+                <article
+                    class="card medicine-card"
+                    data-category="Syrup"
+                    data-name="HydraPlus Syrup"
+                >
+
+                    <div class="medicine-image">
+
+                        <img
+                            src="../assets/medicines/medicine_06.webp"
+                            alt="HydraPlus Syrup"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                        >
+
+                        <div class="medicine-image-fallback">
+                            <i class="bi bi-droplet"></i>
+                        </div>
+
+                    </div>
+
+
+                    <div class="medicine-card-content">
+
+                        <div class="medicine-card-top">
+
+                            <span class="medicine-category-badge">
+                                Syrup
+                            </span>
+
+                            <span class="availability-badge available">
+                                Available
+                            </span>
+
+                        </div>
+
+                        <h3>HydraPlus Syrup</h3>
+
+                        <p class="generic-name">
+                            Demo Generic Compound F
+                        </p>
+
+                        <p class="medicine-description">
+                            Fictional oral liquid representing
+                            a hydration-support product.
+                        </p>
+
+                        <div class="medicine-card-footer">
+
+                            <span class="prescription-status">
+                                <i class="bi bi-check-circle"></i>
+                                Over-the-counter
+                            </span>
+
+                            <button
+                                type="button"
+                                class="medicine-details-btn"
+                            >
+                                View Details
+                                <i class="bi bi-arrow-right"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ================= MEDICINE 07 ================= -->
+
+                <article
+                    class="card medicine-card"
+                    data-category="Ointment"
+                    data-name="DermaHeal Ointment"
+                >
+
+                    <div class="medicine-image">
+
+                        <img
+                            src="../assets/medicines/medicine_07.webp"
+                            alt="DermaHeal Ointment"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                        >
+
+                        <div class="medicine-image-fallback">
+                            <i class="bi bi-bandaid"></i>
+                        </div>
+
+                    </div>
+
+
+                    <div class="medicine-card-content">
+
+                        <div class="medicine-card-top">
+
+                            <span class="medicine-category-badge">
+                                Ointment
+                            </span>
+
+                            <span class="availability-badge available">
+                                Available
+                            </span>
+
+                        </div>
+
+                        <h3>DermaHeal Ointment</h3>
+
+                        <p class="generic-name">
+                            Demo Generic Compound G
+                        </p>
+
+                        <p class="medicine-description">
+                            Fictional topical preparation for
+                            the skin-care catalogue.
+                        </p>
+
+                        <div class="medicine-card-footer">
+
+                            <span class="prescription-status">
+                                <i class="bi bi-check-circle"></i>
+                                Over-the-counter
+                            </span>
+
+                            <button
+                                type="button"
+                                class="medicine-details-btn"
+                            >
+                                View Details
+                                <i class="bi bi-arrow-right"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ================= MEDICINE 08 ================= -->
+
+                <article
+                    class="card medicine-card"
+                    data-category="Ointment"
+                    data-name="SkinGuard Ointment"
+                >
+
+                    <div class="medicine-image">
+
+                        <img
+                            src="../assets/medicines/medicine_08.webp"
+                            alt="SkinGuard Ointment"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                        >
+
+                        <div class="medicine-image-fallback">
+                            <i class="bi bi-bandaid"></i>
+                        </div>
+
+                    </div>
+
+
+                    <div class="medicine-card-content">
+
+                        <div class="medicine-card-top">
+
+                            <span class="medicine-category-badge">
+                                Ointment
+                            </span>
+
+                            <span class="availability-badge unavailable">
+                                Out of Stock
+                            </span>
+
+                        </div>
+
+                        <h3>SkinGuard Ointment</h3>
+
+                        <p class="generic-name">
+                            Demo Generic Compound H
+                        </p>
+
+                        <p class="medicine-description">
+                            Fictional topical medicine placeholder
+                            for skin-care records.
+                        </p>
+
+                        <div class="medicine-card-footer">
+
+                            <span class="prescription-status">
+                                <i class="bi bi-check-circle"></i>
+                                Over-the-counter
+                            </span>
+
+                            <button
+                                type="button"
+                                class="medicine-details-btn"
+                            >
+                                View Details
+                                <i class="bi bi-arrow-right"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ================= MEDICINE 09 ================= -->
+
+                <article
+                    class="card medicine-card"
+                    data-category="Injection"
+                    data-name="CarePro Injection"
+                >
+
+                    <div class="medicine-image">
+
+                        <img
+                            src="../assets/medicines/medicine_09.webp"
+                            alt="CarePro Injection"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                        >
+
+                        <div class="medicine-image-fallback">
+                            <i class="bi bi-prescription2"></i>
+                        </div>
+
+                    </div>
+
+
+                    <div class="medicine-card-content">
+
+                        <div class="medicine-card-top">
+
+                            <span class="medicine-category-badge">
+                                Injection
+                            </span>
+
+                            <span class="availability-badge limited">
+                                Limited Stock
+                            </span>
+
+                        </div>
+
+                        <h3>CarePro Injection</h3>
+
+                        <p class="generic-name">
+                            Demo Generic Compound I
+                        </p>
+
+                        <p class="medicine-description">
+                            Fictional injectable medicine for
+                            clinical inventory demonstration.
+                        </p>
+
+                        <div class="medicine-card-footer">
+
+                            <span class="prescription-status prescription">
+                                <i class="bi bi-file-earmark-medical"></i>
+                                Prescription Required
+                            </span>
+
+                            <button
+                                type="button"
+                                class="medicine-details-btn"
+                            >
+                                View Details
+                                <i class="bi bi-arrow-right"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ================= MEDICINE 10 ================= -->
+
+                <article
+                    class="card medicine-card"
+                    data-category="Injection"
+                    data-name="VitalAid Injection"
+                >
+
+                    <div class="medicine-image">
+
+                        <img
+                            src="../assets/medicines/medicine_10.webp"
+                            alt="VitalAid Injection"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                        >
+
+                        <div class="medicine-image-fallback">
+                            <i class="bi bi-prescription2"></i>
+                        </div>
+
+                    </div>
+
+
+                    <div class="medicine-card-content">
+
+                        <div class="medicine-card-top">
+
+                            <span class="medicine-category-badge">
+                                Injection
+                            </span>
+
+                            <span class="availability-badge available">
+                                Available
+                            </span>
+
+                        </div>
+
+                        <h3>VitalAid Injection</h3>
+
+                        <p class="generic-name">
+                            Demo Generic Compound J
+                        </p>
+
+                        <p class="medicine-description">
+                            Fictional injectable medicine for
+                            prescription inventory demonstration.
+                        </p>
+
+                        <div class="medicine-card-footer">
+
+                            <span class="prescription-status prescription">
+                                <i class="bi bi-file-earmark-medical"></i>
+                                Prescription Required
+                            </span>
+
+                            <button
+                                type="button"
+                                class="medicine-details-btn"
+                            >
+                                View Details
+                                <i class="bi bi-arrow-right"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ================= MEDICINE 11 ================= -->
+
+                <article
+                    class="card medicine-card"
+                    data-category="First Aid"
+                    data-name="WoundCare Kit"
+                >
+
+                    <div class="medicine-image">
+
+                        <img
+                            src="../assets/medicines/medicine_11.webp"
+                            alt="WoundCare Kit"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                        >
+
+                        <div class="medicine-image-fallback">
+                            <i class="bi bi-first-aid"></i>
+                        </div>
+
+                    </div>
+
+
+                    <div class="medicine-card-content">
+
+                        <div class="medicine-card-top">
+
+                            <span class="medicine-category-badge">
+                                First Aid
+                            </span>
+
+                            <span class="availability-badge available">
+                                Available
+                            </span>
+
+                        </div>
+
+                        <h3>WoundCare Kit</h3>
+
+                        <p class="generic-name">
+                            Demo First Aid Compound K
+                        </p>
+
+                        <p class="medicine-description">
+                            Fictional first-aid item representing
+                            basic wound-care supplies.
+                        </p>
+
+                        <div class="medicine-card-footer">
+
+                            <span class="prescription-status">
+                                <i class="bi bi-check-circle"></i>
+                                Over-the-counter
+                            </span>
+
+                            <button
+                                type="button"
+                                class="medicine-details-btn"
+                            >
+                                View Details
+                                <i class="bi bi-arrow-right"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ================= MEDICINE 12 ================= -->
+
+                <article
+                    class="card medicine-card"
+                    data-category="First Aid"
+                    data-name="SafeBand First Aid"
+                >
+
+                    <div class="medicine-image">
+
+                        <img
+                            src="../assets/medicines/medicine_12.webp"
+                            alt="SafeBand First Aid"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                        >
+
+                        <div class="medicine-image-fallback">
+                            <i class="bi bi-first-aid"></i>
+                        </div>
+
+                    </div>
+
+
+                    <div class="medicine-card-content">
+
+                        <div class="medicine-card-top">
+
+                            <span class="medicine-category-badge">
+                                First Aid
+                            </span>
+
+                            <span class="availability-badge unavailable">
+                                Out of Stock
+                            </span>
+
+                        </div>
+
+                        <h3>SafeBand First Aid</h3>
+
+                        <p class="generic-name">
+                            Demo First Aid Compound L
+                        </p>
+
+                        <p class="medicine-description">
+                            Fictional first-aid product for
+                            emergency-care inventory demonstration.
+                        </p>
+
+                        <div class="medicine-card-footer">
+
+                            <span class="prescription-status">
+                                <i class="bi bi-check-circle"></i>
+                                Over-the-counter
+                            </span>
+
+                            <button
+                                type="button"
+                                class="medicine-details-btn"
+                            >
+                                View Details
+                                <i class="bi bi-arrow-right"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+            <!-- ================= EMPTY STATE ================= -->
+
+            <div
+                class="medicine-empty-state"
+                id="medicineEmptyState"
+                hidden
+            >
+
+                <div class="empty-icon">
+                    <i class="bi bi-search"></i>
+                </div>
+
+                <h3>No medicines found</h3>
+
+                <p>
+                    Try searching for a different medicine or
+                    category.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ==================================================
+                         JAVASCRIPT
+    =================================================== -->
+
+    <script>
+
+        const searchInput =
+            document.getElementById("medicineSearch");
+
+        const medicineCards =
+            document.querySelectorAll(".medicine-card");
+
+        const categoryButtons =
+            document.querySelectorAll(".medicine-category");
+
+        const emptyState =
+            document.getElementById("medicineEmptyState");
+
+        const medicineCount =
+            document.getElementById("medicineCount");
+
+
+        let selectedCategory = "all";
+
+
+        function filterMedicines() {
+
+            const searchTerm =
+                searchInput.value
+                    .trim()
+                    .toLowerCase();
+
+            let visibleCount = 0;
+
+
+            medicineCards.forEach(card => {
+
+                const name =
+                    card.dataset.name.toLowerCase();
+
+                const category =
+                    card.dataset.category;
+
+
+                const matchesSearch =
+                    name.includes(searchTerm);
+
+                const matchesCategory =
+                    selectedCategory === "all" ||
+                    category === selectedCategory;
+
+
+                if (matchesSearch && matchesCategory) {
+
+                    card.style.display = "";
+
+                    visibleCount++;
+
+                } else {
+
+                    card.style.display = "none";
+
+                }
+
+            });
+
+
+            emptyState.hidden =
+                visibleCount !== 0;
+
+
+            medicineCount.textContent =
+                `${visibleCount} Medicine${visibleCount === 1 ? "" : "s"}`;
+
+        }
+
+
+        searchInput.addEventListener(
+            "input",
+            filterMedicines
+        );
+
+
+        categoryButtons.forEach(button => {
+
+            button.addEventListener(
+                "click",
+                function() {
+
+                    categoryButtons.forEach(item => {
+                        item.classList.remove("active");
+                    });
+
+                    this.classList.add("active");
+
+                    selectedCategory =
+                        this.dataset.category;
+
+                    filterMedicines();
+
+                }
+            );
+
+        });
+
+
+        filterMedicines();
+
+    </script>
+
+</body>
+
+</html>

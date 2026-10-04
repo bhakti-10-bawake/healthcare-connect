@@ -2,34 +2,57 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <title>Healthcare Connect | Login</title>
 
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    <!-- ================= GOOGLE FONT ================= -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <!-- CSS -->
+    <!-- ================= BOOTSTRAP ICONS ================= -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+    <!-- ================= CSS ================= -->
+
     <link rel="stylesheet" href="../css/variables.css">
+
     <link rel="stylesheet" href="../css/reset.css">
+
     <link rel="stylesheet" href="../css/components.css">
+
     <link rel="stylesheet" href="../css/style.css">
 
 </head>
+
 
 <body>
 
     <main class="login-page">
 
-        <!-- ================= HERO ================= -->
+
+        <!-- ==================================================
+                             HERO
+        =================================================== -->
 
         <section class="login-hero">
 
@@ -39,108 +62,185 @@
 
             </div>
 
-            <h1>Healthcare Connect</h1>
 
-            <p>Your Health, Our Priority</p>
+            <h1>
+                Healthcare Connect
+            </h1>
+
+
+            <p>
+                Your Health, Our Priority
+            </p>
 
         </section>
 
-        <!-- ================= LOGIN CARD ================= -->
+
+
+        <!-- ==================================================
+                           LOGIN CARD
+        =================================================== -->
 
         <section class="login-container">
 
             <div class="login-card">
 
+
+                <!-- ================= LOGIN HEADER ================= -->
+
                 <div class="login-header">
 
-                    <h2>Welcome Back 👋</h2>
+                    <h2>
+                        Welcome Back 👋
+                    </h2>
 
-                    <p>Sign in to continue your healthcare journey.</p>
+                    <p>
+                        Sign in to continue your healthcare journey.
+                    </p>
 
                 </div>
 
-                <!-- Login Form -->
 
-                <form>
 
-                    <!-- Email -->
+                <!-- ================= LOGIN FORM ================= -->
+
+                <form id="loginForm">
+
+
+                    <!-- ================= EMAIL ================= -->
 
                     <div class="form-group">
 
-                        <label class="form-label">Email Address</label>
+                        <label
+                            class="form-label"
+                            for="email">
+
+                            Email Address
+
+                        </label>
+
 
                         <div class="input-box">
 
                             <i class="bi bi-envelope"></i>
 
+
                             <input
                                 type="email"
+                                id="email"
+                                name="email"
                                 placeholder="Enter your email"
+                                autocomplete="email"
                                 required>
 
                         </div>
 
                     </div>
 
-                    <!-- Password -->
+
+
+                    <!-- ================= PASSWORD ================= -->
 
                     <div class="form-group">
 
-                        <label class="form-label">Password</label>
+                        <label
+                            class="form-label"
+                            for="password">
+
+                            Password
+
+                        </label>
+
 
                         <div class="input-box">
 
                             <i class="bi bi-lock"></i>
 
+
                             <input
                                 type="password"
-                                placeholder="Enter password"
                                 id="password"
+                                name="password"
+                                placeholder="Enter password"
+                                autocomplete="current-password"
                                 required>
 
-                            <i class="bi bi-eye toggle-password"></i>
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                id="togglePassword"
+                                aria-label="Show password">
+
+                                <i class="bi bi-eye"></i>
+
+                            </button>
 
                         </div>
 
                     </div>
 
-                    <!-- Remember -->
+
+
+                    <!-- ================= LOGIN OPTIONS ================= -->
 
                     <div class="login-options">
 
+
                         <label class="remember">
 
-                            <input type="checkbox">
+                            <input
+                                type="checkbox"
+                                name="remember">
 
                             Remember Me
 
                         </label>
 
-                        <a href="#">Forgot Password?</a>
+
+                        <a href="#"
+                           id="forgotPassword">
+
+                            Forgot Password?
+
+                        </a>
 
                     </div>
 
-                    <!-- Login Button -->
 
-                    <button class="btn-primary">
+
+                    <!-- ================= LOGIN BUTTON ================= -->
+
+                    <button
+                        type="submit"
+                        class="btn-primary">
 
                         Login
 
                     </button>
 
+
                 </form>
 
-                <!-- Divider -->
+
+
+                <!-- ================= DIVIDER ================= -->
 
                 <div class="divider">
 
-                    <span>OR</span>
+                    <span>
+                        OR
+                    </span>
 
                 </div>
 
-                <!-- Google Login -->
 
-                <button class="btn-secondary">
+
+                <!-- ================= GOOGLE LOGIN ================= -->
+
+                <button
+                    type="button"
+                    class="btn-secondary"
+                    id="googleLogin">
 
                     <i class="bi bi-google"></i>
 
@@ -148,7 +248,9 @@
 
                 </button>
 
-                <!-- Register -->
+
+
+                <!-- ================= REGISTER ================= -->
 
                 <div class="register-link">
 
@@ -156,19 +258,33 @@
 
                         Don't have an account?
 
-                        <a href="#">Create Account</a>
+                        <a href="#"
+                           id="createAccount">
+
+                            Create Account
+
+                        </a>
 
                     </p>
 
                 </div>
 
+
             </div>
 
         </section>
 
+
     </main>
 
+
+
+    <!-- ==================================================
+                         LOGIN JAVASCRIPT
+    =================================================== -->
+
     <script src="../js/login.js"></script>
+
 
 </body>
 

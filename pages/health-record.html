@@ -10,22 +10,17 @@
 
     <title>Digital Health Records | Healthcare Connect</title>
 
-    <!-- CSS -->
-
+    <!-- Existing CSS Architecture -->
     <link rel="stylesheet" href="../css/reset.css">
-
     <link rel="stylesheet" href="../css/variables.css">
-
     <link rel="stylesheet" href="../css/components.css">
-
     <link rel="stylesheet" href="../css/utilities.css">
-
     <link rel="stylesheet" href="../css/style.css">
 
-    <!-- Google Icons -->
-
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-          rel="stylesheet">
+    <!-- Google Material Icons -->
+    <link
+        href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
 
 </head>
 
@@ -38,34 +33,26 @@
     <header class="page-header">
 
         <a href="dashboard.html"
-           class="back-btn">
+           class="back-btn"
+           aria-label="Back to dashboard">
 
             <span class="material-icons">
-
                 arrow_back
-
             </span>
 
         </a>
 
         <div class="header-content">
 
-            <h1>
-
-                Digital Health Records
-
-            </h1>
+            <h1>Digital Health Records</h1>
 
             <p>
-
                 Securely manage and access your health records anytime.
-
             </p>
 
         </div>
 
     </header>
-
 
 
     <!-- ================= SEARCH ================= -->
@@ -75,31 +62,31 @@
         <div class="search-box">
 
             <span class="material-icons">
-
                 search
-
             </span>
 
             <input
-                type="text"
-                placeholder="Search health records">
+                type="search"
+                id="recordSearch"
+                placeholder="Search health records..."
+                aria-label="Search health records">
 
         </div>
 
     </section>
 
 
-
     <!-- ================= ACTION ================= -->
 
     <section class="record-action">
 
-        <button class="btn-primary">
+        <button
+            type="button"
+            class="btn-primary"
+            id="addRecordBtn">
 
             <span class="material-icons">
-
                 add
-
             </span>
 
             Add New Record
@@ -109,379 +96,694 @@
     </section>
 
 
+    <!-- ================= RECORD SUMMARY ================= -->
 
-    <!-- ================= RECORDS ================= -->
+    <section class="record-summary">
 
-    <section class="records-container">
+        <div>
 
+            <span class="material-icons">
+                folder_shared
+            </span>
 
+            <div>
 
-        <!-- ================= CARD 1 ================= -->
+                <strong id="recordCount">
+                    6
+                </strong>
 
-        <article class="card record-card">
-
-            <div class="record-icon">
-
-                <span class="material-icons">
-
-                    description
-
+                <span>
+                    Health Records
                 </span>
 
             </div>
 
-            <div class="record-info">
-
-                <h3 class="card-title">
-
-                    Medical Record Title
-
-                </h3>
-
-                <p class="card-subtitle">
-
-                    Record Category
-
-                </p>
-
-                <div class="record-meta">
-
-                    <span>
-
-                        Upload Date
-
-                    </span>
-
-                    <span class="record-type">
-
-                        PDF
-
-                    </span>
-
-                </div>
-
-            </div>
-
-            <a href="#"
-               class="view-btn">
-
-                View
-
-            </a>
-
-        </article>
-
-
-
-        <!-- ================= CARD 2 ================= -->
-
-        <article class="card record-card">
-
-            <div class="record-icon">
-
-                <span class="material-icons">
-
-                    medication
-
-                </span>
-
-            </div>
-
-            <div class="record-info">
-
-                <h3 class="card-title">
-
-                    Medical Record Title
-
-                </h3>
-
-                <p class="card-subtitle">
-
-                    Record Category
-
-                </p>
-
-                <div class="record-meta">
-
-                    <span>
-
-                        Upload Date
-
-                    </span>
-
-                    <span class="record-type">
-
-                        Image
-
-                    </span>
-
-                </div>
-
-            </div>
-
-            <a href="#"
-               class="view-btn">
-
-                View
-
-            </a>
-
-        </article>
-
-
-
-        <!-- ================= CARD 3 ================= -->
-
-        <article class="card record-card">
-
-            <div class="record-icon">
-
-                <span class="material-icons">
-
-                    science
-
-                </span>
-
-            </div>
-
-            <div class="record-info">
-
-                <h3 class="card-title">
-
-                    Medical Record Title
-
-                </h3>
-
-                <p class="card-subtitle">
-
-                    Record Category
-
-                </p>
-
-                <div class="record-meta">
-
-                    <span>
-
-                        Upload Date
-
-                    </span>
-
-                    <span class="record-type">
-
-                        PDF
-
-                    </span>
-
-                </div>
-
-            </div>
-
-            <a href="#"
-               class="view-btn">
-
-                View
-
-            </a>
-
-        </article>
-                <!-- ================= CARD 4 ================= -->
-
-        <article class="card record-card">
-
-            <div class="record-icon">
-
-                <span class="material-icons">
-
-                    vaccinations
-
-                </span>
-
-            </div>
-
-            <div class="record-info">
-
-                <h3 class="card-title">
-
-                    Medical Record Title
-
-                </h3>
-
-                <p class="card-subtitle">
-
-                    Record Category
-
-                </p>
-
-                <div class="record-meta">
-
-                    <span>
-
-                        Upload Date
-
-                    </span>
-
-                    <span class="record-type">
-
-                        PDF
-
-                    </span>
-
-                </div>
-
-            </div>
-
-            <a href="#"
-               class="view-btn">
-
-                View
-
-            </a>
-
-        </article>
-
-
-
-        <!-- ================= CARD 5 ================= -->
-
-        <article class="card record-card">
-
-            <div class="record-icon">
-
-                <span class="material-icons">
-
-                    monitor_heart
-
-                </span>
-
-            </div>
-
-            <div class="record-info">
-
-                <h3 class="card-title">
-
-                    Medical Record Title
-
-                </h3>
-
-                <p class="card-subtitle">
-
-                    Record Category
-
-                </p>
-
-                <div class="record-meta">
-
-                    <span>
-
-                        Upload Date
-
-                    </span>
-
-                    <span class="record-type">
-
-                        Image
-
-                    </span>
-
-                </div>
-
-            </div>
-
-            <a href="#"
-               class="view-btn">
-
-                View
-
-            </a>
-
-        </article>
-
-
-
-        <!-- ================= CARD 6 ================= -->
-
-        <article class="card record-card">
-
-            <div class="record-icon">
-
-                <span class="material-icons">
-
-                    folder_shared
-
-                </span>
-
-            </div>
-
-            <div class="record-info">
-
-                <h3 class="card-title">
-
-                    Medical Record Title
-
-                </h3>
-
-                <p class="card-subtitle">
-
-                    Record Category
-
-                </p>
-
-                <div class="record-meta">
-
-                    <span>
-
-                        Upload Date
-
-                    </span>
-
-                    <span class="record-type">
-
-                        PDF
-
-                    </span>
-
-                </div>
-
-            </div>
-
-            <a href="#"
-               class="view-btn">
-
-                View
-
-            </a>
-
-        </article>
-
-    </section>
-
-
-
-    <!-- ================= EMPTY STATE ================= -->
-
-    <section class="empty-state">
-
-        <span class="material-icons">
-
-            folder_open
-
-        </span>
-
-        <h2>
-
-            No Records Available
-
-        </h2>
+        </div>
 
         <p>
-
-            Your uploaded medical records will appear here once they are added.
-
+            Your important healthcare documents in one place.
         </p>
 
     </section>
 
+
+    <!-- ================= RECORDS ================= -->
+
+    <section
+        class="records-container"
+        id="recordsContainer">
+
+
+        <!-- RECORD 1 -->
+
+        <article
+            class="card record-card"
+            data-search="blood test laboratory report pathology">
+
+            <div class="record-icon">
+
+                <span class="material-icons">
+                    science
+                </span>
+
+            </div>
+
+            <div class="record-info">
+
+                <h3 class="card-title">
+                    Complete Blood Count
+                </h3>
+
+                <p class="card-subtitle">
+                    Laboratory Report
+                </p>
+
+                <div class="record-meta">
+
+                    <span>
+                        12 Sep 2026
+                    </span>
+
+                    <span class="record-type">
+                        PDF
+                    </span>
+
+                </div>
+
+            </div>
+
+            <button
+                type="button"
+                class="view-btn"
+                data-record="Complete Blood Count">
+
+                View
+
+            </button>
+
+        </article>
+
+
+        <!-- RECORD 2 -->
+
+        <article
+            class="card record-card"
+            data-search="prescription medicine doctor prescription">
+
+            <div class="record-icon">
+
+                <span class="material-icons">
+                    medication
+                </span>
+
+            </div>
+
+            <div class="record-info">
+
+                <h3 class="card-title">
+                    Prescription
+                </h3>
+
+                <p class="card-subtitle">
+                    Doctor Prescription
+                </p>
+
+                <div class="record-meta">
+
+                    <span>
+                        05 Sep 2026
+                    </span>
+
+                    <span class="record-type">
+                        Image
+                    </span>
+
+                </div>
+
+            </div>
+
+            <button
+                type="button"
+                class="view-btn"
+                data-record="Prescription">
+
+                View
+
+            </button>
+
+        </article>
+
+
+        <!-- RECORD 3 -->
+
+        <article
+            class="card record-card"
+            data-search="health checkup diagnostic report">
+
+            <div class="record-icon">
+
+                <span class="material-icons">
+                    monitor_heart
+                </span>
+
+            </div>
+
+            <div class="record-info">
+
+                <h3 class="card-title">
+                    Health Checkup Report
+                </h3>
+
+                <p class="card-subtitle">
+                    Diagnostic Report
+                </p>
+
+                <div class="record-meta">
+
+                    <span>
+                        28 Aug 2026
+                    </span>
+
+                    <span class="record-type">
+                        PDF
+                    </span>
+
+                </div>
+
+            </div>
+
+            <button
+                type="button"
+                class="view-btn"
+                data-record="Health Checkup Report">
+
+                View
+
+            </button>
+
+        </article>
+
+
+        <!-- RECORD 4 -->
+
+        <article
+            class="card record-card"
+            data-search="vaccination immunization vaccine record">
+
+            <div class="record-icon">
+
+                <span class="material-icons">
+                    vaccinations
+                </span>
+
+            </div>
+
+            <div class="record-info">
+
+                <h3 class="card-title">
+                    Vaccination Record
+                </h3>
+
+                <p class="card-subtitle">
+                    Immunization Record
+                </p>
+
+                <div class="record-meta">
+
+                    <span>
+                        16 Aug 2026
+                    </span>
+
+                    <span class="record-type">
+                        PDF
+                    </span>
+
+                </div>
+
+            </div>
+
+            <button
+                type="button"
+                class="view-btn"
+                data-record="Vaccination Record">
+
+                View
+
+            </button>
+
+        </article>
+
+
+        <!-- RECORD 5 -->
+
+        <article
+            class="card record-card"
+            data-search="ecg heart cardiology report">
+
+            <div class="record-icon">
+
+                <span class="material-icons">
+                    favorite
+                </span>
+
+            </div>
+
+            <div class="record-info">
+
+                <h3 class="card-title">
+                    ECG Report
+                </h3>
+
+                <p class="card-subtitle">
+                    Cardiology Report
+                </p>
+
+                <div class="record-meta">
+
+                    <span>
+                        02 Aug 2026
+                    </span>
+
+                    <span class="record-type">
+                        Image
+                    </span>
+
+                </div>
+
+            </div>
+
+            <button
+                type="button"
+                class="view-btn"
+                data-record="ECG Report">
+
+                View
+
+            </button>
+
+        </article>
+
+
+        <!-- RECORD 6 -->
+
+        <article
+            class="card record-card"
+            data-search="medical history patient health record">
+
+            <div class="record-icon">
+
+                <span class="material-icons">
+                    folder_shared
+                </span>
+
+            </div>
+
+            <div class="record-info">
+
+                <h3 class="card-title">
+                    Medical History
+                </h3>
+
+                <p class="card-subtitle">
+                    Patient Health Record
+                </p>
+
+                <div class="record-meta">
+
+                    <span>
+                        24 Jul 2026
+                    </span>
+
+                    <span class="record-type">
+                        PDF
+                    </span>
+
+                </div>
+
+            </div>
+
+            <button
+                type="button"
+                class="view-btn"
+                data-record="Medical History">
+
+                View
+
+            </button>
+
+        </article>
+
+
+    </section>
+
+
+    <!-- ================= EMPTY SEARCH STATE ================= -->
+
+    <section
+        class="empty-state"
+        id="emptyRecordState"
+        hidden>
+
+        <span class="material-icons">
+            search_off
+        </span>
+
+        <h2>
+            No Records Found
+        </h2>
+
+        <p>
+            We couldn't find any health records matching your search.
+        </p>
+
+    </section>
+
+
+    <!-- ================= PRIVACY NOTICE ================= -->
+
+    <section class="card record-privacy">
+
+        <span class="material-icons">
+            lock
+        </span>
+
+        <div>
+
+            <h3>
+                Your records are private
+            </h3>
+
+            <p>
+                Health records are intended to be securely managed
+                and accessible only to authorized users.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ADD RECORD MODAL ================= -->
+
+    <div
+        class="record-modal"
+        id="recordModal"
+        hidden>
+
+        <div
+            class="record-modal-overlay"
+            id="modalOverlay">
+        </div>
+
+        <div
+            class="card record-modal-content"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="recordModalTitle">
+
+            <div class="record-modal-header">
+
+                <div>
+
+                    <h2 id="recordModalTitle">
+                        Add New Record
+                    </h2>
+
+                    <p class="card-subtitle">
+                        Add a record to your digital health profile.
+                    </p>
+
+                </div>
+
+                <button
+                    type="button"
+                    class="modal-close"
+                    id="closeModalBtn"
+                    aria-label="Close">
+
+                    <span class="material-icons">
+                        close
+                    </span>
+
+                </button>
+
+            </div>
+
+
+            <form id="recordForm">
+
+                <div class="record-form-group">
+
+                    <label for="recordTitle">
+                        Record Title
+                    </label>
+
+                    <input
+                        type="text"
+                        id="recordTitle"
+                        placeholder="e.g. Blood Test Report"
+                        required>
+
+                </div>
+
+
+                <div class="record-form-group">
+
+                    <label for="recordCategory">
+                        Category
+                    </label>
+
+                    <select
+                        id="recordCategory"
+                        required>
+
+                        <option value="">
+                            Select category
+                        </option>
+
+                        <option value="Laboratory Report">
+                            Laboratory Report
+                        </option>
+
+                        <option value="Prescription">
+                            Prescription
+                        </option>
+
+                        <option value="Diagnostic Report">
+                            Diagnostic Report
+                        </option>
+
+                        <option value="Vaccination Record">
+                            Vaccination Record
+                        </option>
+
+                        <option value="Other">
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="record-form-group">
+
+                    <label for="recordFile">
+                        Record File
+                    </label>
+
+                    <input
+                        type="file"
+                        id="recordFile"
+                        accept=".pdf,.jpg,.jpeg,.png">
+
+                    <small>
+                        PDF, JPG, JPEG or PNG
+                    </small>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="btn-primary record-submit-btn">
+
+                    <span class="material-icons">
+                        upload_file
+                    </span>
+
+                    Add Record
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
 </main>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const searchInput =
+        document.getElementById("recordSearch");
+
+    const records =
+        document.querySelectorAll(".record-card");
+
+    const emptyState =
+        document.getElementById("emptyRecordState");
+
+    const recordCount =
+        document.getElementById("recordCount");
+
+    const addRecordBtn =
+        document.getElementById("addRecordBtn");
+
+    const modal =
+        document.getElementById("recordModal");
+
+    const closeModalBtn =
+        document.getElementById("closeModalBtn");
+
+    const modalOverlay =
+        document.getElementById("modalOverlay");
+
+    const recordForm =
+        document.getElementById("recordForm");
+
+
+    /* ================= SEARCH ================= */
+
+    searchInput.addEventListener("input", function () {
+
+        const searchTerm =
+            searchInput.value.toLowerCase().trim();
+
+        let visibleRecords = 0;
+
+        records.forEach(function (record) {
+
+            const searchData =
+                record.dataset.search.toLowerCase();
+
+            if (searchData.includes(searchTerm)) {
+
+                record.style.display = "";
+
+                visibleRecords++;
+
+            } else {
+
+                record.style.display = "none";
+
+            }
+
+        });
+
+        emptyState.hidden =
+            visibleRecords !== 0;
+
+    });
+
+
+    /* ================= OPEN MODAL ================= */
+
+    addRecordBtn.addEventListener("click", function () {
+
+        modal.hidden = false;
+
+        document.body.style.overflow = "hidden";
+
+    });
+
+
+    /* ================= CLOSE MODAL ================= */
+
+    function closeModal() {
+
+        modal.hidden = true;
+
+        document.body.style.overflow = "";
+
+    }
+
+    closeModalBtn.addEventListener(
+        "click",
+        closeModal
+    );
+
+    modalOverlay.addEventListener(
+        "click",
+        closeModal
+    );
+
+
+    /* ================= ADD RECORD ================= */
+
+    recordForm.addEventListener(
+        "submit",
+        function (event) {
+
+            event.preventDefault();
+
+            const title =
+                document.getElementById("recordTitle").value.trim();
+
+            const category =
+                document.getElementById("recordCategory").value;
+
+            if (!title || !category) {
+
+                return;
+
+            }
+
+            alert(
+                "Record added successfully. Backend storage will be connected in a future version."
+            );
+
+            recordForm.reset();
+
+            closeModal();
+
+        }
+    );
+
+
+    /* ================= VIEW RECORD ================= */
+
+    document
+        .querySelectorAll(".view-btn")
+        .forEach(function (button) {
+
+            button.addEventListener(
+                "click",
+                function () {
+
+                    const recordName =
+                        button.dataset.record;
+
+                    alert(
+                        recordName +
+                        " preview will be available once secure record storage is connected."
+                    );
+
+                }
+            );
+
+        });
+
+});
+
+</script>
 
 </body>
 
